@@ -1,6 +1,7 @@
 #include "sd_browser.h"
 
 #include "fatfs.h"
+#include "usbd_cdc_if.h"
 #include "usart_ring.h"
 #include "w25q16.h"
 
@@ -30,10 +31,18 @@ typedef struct {
 } Request;
 
 typedef enum { TRANSFER_NONE, TRANSFER_READ, TRANSFER_WRITE } TransferMode;
+typedef enum { PORT_UART, PORT_USB, PORT_COUNT } BrowserPort;
+
+typedef struct {
+    char data[MAX_FRAME + 1];
+    size_t length;
+    bool receiving;
+} BrowserInput;
 
 typedef struct {
     FIL file;
     TransferMode mode;
+    BrowserPort owner;
     uint32_t size;
     uint32_t last_activity;
     bool replace;
@@ -42,16 +51,17 @@ typedef struct {
     TCHAR backup[16];
 } Transfer;
 
-static char frame[MAX_FRAME + 1];
 static char response[MAX_RESPONSE];
 static Request request;
 static Transfer transfer;
 static _Alignas(4) BYTE block[BLOCK_SIZE];
-static size_t frame_length;
-static bool receiving;
 static const TCHAR sd_drive[] = u"0:";
 static const TCHAR nor_drive[] = u"1:";
 static const TCHAR *drive = sd_drive;
+static BrowserInput inputs[PORT_COUNT];
+static const TCHAR *volumes[PORT_COUNT] = {sd_drive, sd_drive};
+static BrowserPort reply_port;
+static uint32_t usb_session;
 
 static void skip_space(const char **cursor)
 {
@@ -233,6 +243,9 @@ static bool valid_path(const TCHAR *path)
 static bool transmit(int length)
 {
     if (length <= 0 || (size_t)length >= sizeof(response)) return false;
+    if (reply_port == PORT_USB) {
+        return CDC_Write_FS((const uint8_t *)response, (uint16_t)length, usb_session);
+    }
     uint32_t timeout = 500U + (uint32_t)length * 10000U / MYUART.Init.BaudRate;
     return HAL_UART_Transmit(&MYUART, (uint8_t *)response, (uint16_t)length, timeout) == HAL_OK;
 }
@@ -378,6 +391,7 @@ static FRESULT begin_upload(const Request *req, bool replace)
     if (result != FR_OK) return result;
     memcpy(transfer.destination, req->path, sizeof(transfer.destination));
     transfer.mode = TRANSFER_WRITE;
+    transfer.owner = reply_port;
     transfer.replace = replace;
     transfer.size = req->size;
     transfer.last_activity = HAL_GetTick();
@@ -468,6 +482,7 @@ static FRESULT begin_download(const Request *req)
     FRESULT result = f_open(&transfer.file, req->path, FA_READ);
     if (result != FR_OK) return result;
     transfer.mode = TRANSFER_READ;
+    transfer.owner = reply_port;
     transfer.size = f_size(&transfer.file);
     transfer.last_activity = HAL_GetTick();
     return transmit(snprintf(response, sizeof(response),
@@ -555,6 +570,14 @@ static FRESULT report_free_space(uint32_t id)
 
 static FRESULT execute(Request *req)
 {
+    if (transfer.mode != TRANSFER_NONE && transfer.owner != reply_port) return FR_LOCKED;
+
+    const TCHAR *volume = volumes[reply_port];
+    if (drive != volume) {
+        FRESULT result = f_chdrive(volume);
+        if (result != FR_OK) return result;
+        drive = volume;
+    }
     if (equal(req->op, u"flashid") && !req->fields) return flash_diagnostics(req->id);
     if (equal(req->op, u"mount") && !req->fields) return mount_volume(false);
     if (equal(req->op, u"mntnor") && !req->fields) return mount_volume(true);
@@ -589,38 +612,65 @@ void SD_Browser_Init(void)
     __HAL_UART_ENABLE_IT(&MYUART, UART_IT_RXNE);
 }
 
+static void receive_byte(BrowserPort port, char ch)
+{
+    BrowserInput *input = &inputs[port];
+    if (ch == 0x1E) {
+        input->length = 0;
+        input->receiving = true;
+        return;
+    }
+    if (!input->receiving) return;
+
+    reply_port = port;
+    if (ch == '\n') {
+        input->receiving = false;
+        input->data[input->length] = 0;
+        FRESULT result = parse_request(input->data) ? execute(&request) : FR_INVALID_PARAMETER;
+        if (result == FR_OK && (equal(request.op, u"mount") || equal(request.op, u"mntnor"))) {
+            volumes[port] = drive;
+            transmit(snprintf(response, sizeof(response), "{\"id\":%lu,\"result\":0,\"version\":3}\n",
+                (unsigned long)request.id));
+        } else {
+            send_result(request.id, result);
+        }
+    } else if (!ch || input->length == MAX_FRAME) {
+        input->receiving = false;
+        send_result(0, FR_INVALID_PARAMETER);
+    } else {
+        input->data[input->length++] = ch;
+    }
+}
+
 void SD_Browser_Poll(void)
 {
-    if (transfer.mode != TRANSFER_NONE && HAL_GetTick() - transfer.last_activity >= TRANSFER_IDLE_MS) {
+    uint32_t session = CDC_Session_FS();
+    bool usb_reset = usb_session != session;
+    if (usb_reset) {
+        usb_session = session;
+        inputs[PORT_USB].receiving = false;
+        volumes[PORT_USB] = sd_drive;
+    }
+    if (transfer.mode != TRANSFER_NONE &&
+        ((usb_reset && transfer.owner == PORT_USB) ||
+         HAL_GetTick() - transfer.last_activity >= TRANSFER_IDLE_MS)) {
         abort_transfer();
     }
-    while (uart_available()) {
-        char ch = (char)uart_read();
+
+    uint8_t packet[CDC_DATA_FS_OUT_PACKET_SIZE];
+    uint16_t length = CDC_ReadPacket_FS(packet, usb_session);
+    for (uint16_t i = 0; i < length && CDC_Session_FS() == usb_session; ++i) {
+        receive_byte(PORT_USB, (char)packet[i]);
+    }
+
+    uint16_t available = uart_available();
+    while (available-- != 0U) {
         if (uart_discard_on_error()) {
-            receiving = false;
+            inputs[PORT_UART].receiving = false;
+            reply_port = PORT_UART;
             send_result(0, FR_INVALID_PARAMETER);
-            continue;
+            break;
         }
-        if (ch == 0x1E) {
-            frame_length = 0;
-            receiving = true;
-        } else if (!receiving) {
-            continue;
-        } else if (ch == '\n') {
-            receiving = false;
-            frame[frame_length] = 0;
-            FRESULT result = parse_request(frame) ? execute(&request) : FR_INVALID_PARAMETER;
-            if (result == FR_OK && (equal(request.op, u"mount") || equal(request.op, u"mntnor"))) {
-                transmit(snprintf(response, sizeof(response), "{\"id\":%lu,\"result\":0,\"version\":3}\n",
-                    (unsigned long)request.id));
-            } else {
-                send_result(request.id, result);
-            }
-        } else if (!ch || frame_length == MAX_FRAME) {
-            receiving = false;
-            send_result(0, FR_INVALID_PARAMETER);
-        } else {
-            frame[frame_length++] = ch;
-        }
+        receive_byte(PORT_UART, (char)uart_read());
     }
 }

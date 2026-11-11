@@ -14,6 +14,8 @@ set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_mmc.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c"
@@ -24,6 +26,7 @@ set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -161,6 +164,60 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
 endif()
 
 # sources_SRCS at CMakeLists.txt:37 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/*.c")
+set(OLD_GLOB
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  set(NEW_ONLY ${NEW_GLOB})
+  set(OLD_ONLY ${OLD_GLOB})
+  list(REMOVE_ITEM NEW_ONLY ${OLD_GLOB})
+  list(REMOVE_ITEM OLD_ONLY ${NEW_GLOB})
+  if(NEW_ONLY)
+    message("The following files were added:")
+    foreach(VAR_FILE IN LISTS NEW_ONLY)
+      message("  +${VAR_FILE}")
+    endforeach()
+  endif()
+  if(OLD_ONLY)
+    message("The following files were removed:")
+    foreach(VAR_FILE IN LISTS OLD_ONLY)
+      message("  -${VAR_FILE}")
+    endforeach()
+  endif()
+  file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
+endif()
+
+# sources_SRCS at CMakeLists.txt:37 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Core/Src/*.c")
+set(OLD_GLOB
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  set(NEW_ONLY ${NEW_GLOB})
+  set(OLD_ONLY ${OLD_GLOB})
+  list(REMOVE_ITEM NEW_ONLY ${OLD_GLOB})
+  list(REMOVE_ITEM OLD_ONLY ${NEW_GLOB})
+  if(NEW_ONLY)
+    message("The following files were added:")
+    foreach(VAR_FILE IN LISTS NEW_ONLY)
+      message("  +${VAR_FILE}")
+    endforeach()
+  endif()
+  if(OLD_ONLY)
+    message("The following files were removed:")
+    foreach(VAR_FILE IN LISTS OLD_ONLY)
+      message("  -${VAR_FILE}")
+    endforeach()
+  endif()
+  file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
+endif()
+
+# sources_SRCS at CMakeLists.txt:37 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/*.c")
 set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/diskio.c"
@@ -168,6 +225,60 @@ set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/option/syscall.c"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  set(NEW_ONLY ${NEW_GLOB})
+  set(OLD_ONLY ${OLD_GLOB})
+  list(REMOVE_ITEM NEW_ONLY ${OLD_GLOB})
+  list(REMOVE_ITEM OLD_ONLY ${NEW_GLOB})
+  if(NEW_ONLY)
+    message("The following files were added:")
+    foreach(VAR_FILE IN LISTS NEW_ONLY)
+      message("  +${VAR_FILE}")
+    endforeach()
+  endif()
+  if(OLD_ONLY)
+    message("The following files were removed:")
+    foreach(VAR_FILE IN LISTS OLD_ONLY)
+      message("  -${VAR_FILE}")
+    endforeach()
+  endif()
+  file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
+endif()
+
+# sources_SRCS at CMakeLists.txt:37 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/App/*.c")
+set(OLD_GLOB
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/App/usb_device.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/App/usbd_cdc_if.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/App/usbd_desc.c"
+  )
+if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
+  message("-- GLOB mismatch!")
+  set(NEW_ONLY ${NEW_GLOB})
+  set(OLD_ONLY ${OLD_GLOB})
+  list(REMOVE_ITEM NEW_ONLY ${OLD_GLOB})
+  list(REMOVE_ITEM OLD_ONLY ${NEW_GLOB})
+  if(NEW_ONLY)
+    message("The following files were added:")
+    foreach(VAR_FILE IN LISTS NEW_ONLY)
+      message("  +${VAR_FILE}")
+    endforeach()
+  endif()
+  if(OLD_ONLY)
+    message("The following files were removed:")
+    foreach(VAR_FILE IN LISTS OLD_ONLY)
+      message("  -${VAR_FILE}")
+    endforeach()
+  endif()
+  file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
+endif()
+
+# sources_SRCS at CMakeLists.txt:37 (file)
+file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/Target/*.c")
+set(OLD_GLOB
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/Target/usbd_conf.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")

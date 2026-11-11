@@ -39,6 +39,10 @@ file(GLOB_RECURSE sources_SRCS CONFIGURE_DEPENDS
     ${CMAKE_CURRENT_LIST_DIR}/FATFS/App/*.c
     ${CMAKE_CURRENT_LIST_DIR}/FATFS/Target/*.c
     ${CMAKE_CURRENT_LIST_DIR}/Middlewares/Third_Party/FatFs/src/*.c
+    ${CMAKE_CURRENT_LIST_DIR}/USB_DEVICE/App/*.c
+    ${CMAKE_CURRENT_LIST_DIR}/USB_DEVICE/Target/*.c
+    ${CMAKE_CURRENT_LIST_DIR}/Middlewares/ST/STM32_USB_Device_Library/Core/Src/*.c
+    ${CMAKE_CURRENT_LIST_DIR}/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/*.c
 	${CMAKE_CURRENT_SOURCE_DIR}/startup/startup_stm32f407zetx.s
 	${CMAKE_CURRENT_SOURCE_DIR}/startup/system_stm32f4xx.c
 )
@@ -49,6 +53,10 @@ ${CMAKE_CURRENT_LIST_DIR}/Core/Inc
 ${CMAKE_CURRENT_LIST_DIR}/FATFS/App
 ${CMAKE_CURRENT_LIST_DIR}/FATFS/Target
 ${CMAKE_CURRENT_LIST_DIR}/Middlewares/Third_Party/FatFs/src
+${CMAKE_CURRENT_LIST_DIR}/USB_DEVICE/App
+${CMAKE_CURRENT_LIST_DIR}/USB_DEVICE/Target
+${CMAKE_CURRENT_LIST_DIR}/Middlewares/ST/STM32_USB_Device_Library/Core/Inc
+${CMAKE_CURRENT_LIST_DIR}/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc
 
 )
 # Include directories for each compiler
