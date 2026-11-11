@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "cmake",
+            "label": "CMake: build",
+            "command": "build",
+            "targets": ["all"],
+            "group": "build",
+            "problemMatcher": []
+        },
+        {
+            "type": "process",
+            "label": "flash",
+            "dependsOn": "CMake: build",
+            "command": "${config:cortex-debug.openocdPath}",
+            "args": [
+                "-f", "interface/cmsis-dap.cfg",
+                "-c", "transport select swd",
+                "-f", "target/stm32f4x.cfg",
+                "-c", "program {${command:cmake.launchTargetPath}} verify reset exit"
+            ],
+            "problemMatcher": []
+        }
+    ]
+}

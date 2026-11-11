@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/cmake_install.cmake",
+		"C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/drivers/STM32F4xx_HAL_Driver/cmake_install.cmake",
+		"C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/drivers/CMSIS/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

@@ -1,0 +1,37 @@
+{
+    "files.associations": {
+        "platform_types.h": "c",
+        "adc_with_dma.h": "c",
+        "mux.h": "c",
+        "devices.h": "c",
+        "matrix_autotest_scu_can_vars.h": "c",
+        "can_types.h": "c",
+        "system_stm32f4xx.h": "c",
+        "stm32f4xx.h": "c",
+        "cstdint": "cpp",
+        "stdint.h": "c"
+    },
+    "disasexpl.associations": {
+        "**/*.c": "${workspaceFolder}/build/debug/CMakeFiles/scu_testbench.dir/${relativeFile}.S",
+        "**/*.cpp": "${workspaceFolder}/build/debug/CMakeFiles/scu_testbench.dir/${relativeFile}.S"
+    },
+    "cortex-debug.variableUseNaturalFormat": false,
+    "hexeditor.showOpenFileButton": true,
+
+    "cmake.makeProgram": "C:/VStools/ninja/ninja.exe",
+    "cmake.configureArgs": [
+        "-DCMAKE_MAKE_PROGRAM=C:/VStools/ninja/ninja.exe"
+    ],
+    
+    "cmake.configureEnvironment": {
+        "PATH": "C:/VStools/gnu-tools-for-stm32/tools/bin;${env:PATH}"
+    },
+
+    "cmake.buildEnvironment": {
+        "PATH": "C:/VStools/gnu-tools-for-stm32/tools/bin;${env:PATH}"
+    },
+
+    // --- ДОБАВЬТЕ ЭТУ СТРОКУ ДЛЯ ОТЛАДЧИКА ---
+    "cortex-debug.armToolchainPath": "C:/VStools/gnu-tools-for-stm32/tools/bin",
+    "cortex-debug.openocdPath": "C:/VStools/OpenOCD-20250710-0.12.0/bin/openocd.exe"
+}

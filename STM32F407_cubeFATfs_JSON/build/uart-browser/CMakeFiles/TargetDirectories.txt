@@ -1,0 +1,7 @@
+C:/II/STM32/STM32F407_cubeFATfs_JSON/build/uart-browser/CMakeFiles/STM32F407_cubeLed.dir
+C:/II/STM32/STM32F407_cubeFATfs_JSON/build/uart-browser/CMakeFiles/edit_cache.dir
+C:/II/STM32/STM32F407_cubeFATfs_JSON/build/uart-browser/CMakeFiles/rebuild_cache.dir
+C:/II/STM32/STM32F407_cubeFATfs_JSON/build/uart-browser/drivers/STM32F4xx_HAL_Driver/CMakeFiles/edit_cache.dir
+C:/II/STM32/STM32F407_cubeFATfs_JSON/build/uart-browser/drivers/STM32F4xx_HAL_Driver/CMakeFiles/rebuild_cache.dir
+C:/II/STM32/STM32F407_cubeFATfs_JSON/build/uart-browser/drivers/CMSIS/CMakeFiles/edit_cache.dir
+C:/II/STM32/STM32F407_cubeFATfs_JSON/build/uart-browser/drivers/CMSIS/CMakeFiles/rebuild_cache.dir

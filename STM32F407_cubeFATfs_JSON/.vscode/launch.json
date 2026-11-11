@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DAP link Debug",
+            "cwd": "${workspaceFolder}",
+            "preLaunchTask": "CMake: build",
+            "executable": "${command:cmake.launchTargetPath}",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "openocd",
+            "svdPath": "${workspaceRoot}/stm32f407.svd",
+            "configFiles": [
+                "interface/cmsis-dap.cfg",
+                "target/stm32f4x.cfg"
+            ]
+        },
+        {
+            "name": "ST-link Debug",
+            "cwd": "${workspaceRoot}",
+            // "preLaunchTask": "flash",
+            "executable": "${command:cmake.launchTargetPath}",
+            "request": "launch",
+            "type": "cortex-debug",
+            "svdPath": "${workspaceRoot}/stm32f407.svd",
+            "servertype": "stlink",
+            "configFiles": [
+            ]
+        }
+    ]
+}

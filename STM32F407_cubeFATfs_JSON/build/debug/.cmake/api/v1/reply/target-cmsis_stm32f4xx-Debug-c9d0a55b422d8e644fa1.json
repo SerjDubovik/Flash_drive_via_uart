@@ -1,0 +1,154 @@
+{
+	"abstract" : true,
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library"
+		],
+		"files" : 
+		[
+			"drivers/CMSIS/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			}
+		]
+	},
+	"codemodelVersion" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	},
+	"id" : "cmsis_stm32f4xx::@74add56496c4d0745176",
+	"interfaceSources" : 
+	[
+		{
+			"path" : "drivers/CMSIS/Inc/cachel1_armv7.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/cmsis_armcc.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/cmsis_armclang.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/cmsis_armclang_ltm.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/cmsis_compiler.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/cmsis_gcc.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/cmsis_iccarm.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/cmsis_version.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/core_armv81mml.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/core_armv8mbl.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/core_armv8mml.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/core_cm4.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/mpu_armv7.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/mpu_armv8.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/pac_armv81.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/pmu_armv8.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/stm32f407xx.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/stm32f4xx.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/system_stm32f4xx.h",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"path" : "drivers/CMSIS/Inc/tz_context.h",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"name" : "cmsis_stm32f4xx",
+	"paths" : 
+	{
+		"build" : "drivers/CMSIS",
+		"source" : "drivers/CMSIS"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"interfaceSourceIndexes" : 
+			[
+				0,
+				1,
+				2,
+				3,
+				4,
+				5,
+				6,
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19
+			],
+			"name" : "Header Files",
+			"sourceIndexes" : []
+		}
+	],
+	"sources" : [],
+	"type" : "INTERFACE_LIBRARY"
+}

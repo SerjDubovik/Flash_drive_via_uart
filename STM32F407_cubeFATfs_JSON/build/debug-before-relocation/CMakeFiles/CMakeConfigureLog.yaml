@@ -1,0 +1,2181 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineSystem.cmake:207 (message)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      The target system is: Generic -  - arm
+      The host system is: Windows - 10.0.26200 - AMD64
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:67 (_cmake_find_compiler_path)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/"
+      - "C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/cmake/"
+    found: "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc.exe 
+      Build flags: -fdata-sections;-ffunction-sections;-Wl,--gc-sections
+      Id flags:  
+      
+      The output was:
+      1
+      C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
+      (.text.exit+0x28): undefined reference to `_exit'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCCompilerId.c.in"
+    candidate_directories:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/"
+      - "C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/cmake/"
+    found: "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCCompilerId.c.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:122 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc.exe 
+      Build flags: -fdata-sections;-ffunction-sections;-Wl,--gc-sections
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/4.3.1/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_AR"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ar"
+      - "ar"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-ar.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_RANLIB"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ranlib"
+      - "ranlib"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-ranlib.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_STRIP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-strip"
+      - "strip"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-strip.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-strip.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_LINKER"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-ld"
+      - "ld"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-ld.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-ld.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_NM"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-nm"
+      - "nm"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-nm.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-nm.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_OBJDUMP"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-objdump"
+      - "objdump"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-objdump.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-objdump.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_READELF"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-readelf"
+      - "readelf"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-readelf.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-readelf.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_DLLTOOL"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-dlltool"
+      - "dlltool"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-dlltool.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-dlltool.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/arm-none-eabi-dlltool"
+      - "C:/Windows/arm-none-eabi-dlltool.com"
+      - "C:/Windows/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/wbem/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-dlltool"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-dlltool.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-dlltool.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-dlltool"
+      - "C:/VStools/cmake/bin/arm-none-eabi-dlltool.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-dlltool.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-dlltool"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-dlltool.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-dlltool.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-dlltool"
+      - "C:/VStools/ninja/arm-none-eabi-dlltool.com"
+      - "C:/VStools/ninja/arm-none-eabi-dlltool.exe"
+      - "C:/VStools/ninja/arm-none-eabi-dlltool"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-dlltool.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-dlltool.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-dlltool"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-dlltool.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-dlltool.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-dlltool"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/dlltool.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/dlltool.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/dlltool"
+      - "C:/Windows/System32/dlltool.com"
+      - "C:/Windows/System32/dlltool.exe"
+      - "C:/Windows/System32/dlltool"
+      - "C:/Windows/dlltool.com"
+      - "C:/Windows/dlltool.exe"
+      - "C:/Windows/dlltool"
+      - "C:/Windows/System32/wbem/dlltool.com"
+      - "C:/Windows/System32/wbem/dlltool.exe"
+      - "C:/Windows/System32/wbem/dlltool"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/dlltool.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/dlltool.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/dlltool"
+      - "C:/Windows/System32/OpenSSH/dlltool.com"
+      - "C:/Windows/System32/OpenSSH/dlltool.exe"
+      - "C:/Windows/System32/OpenSSH/dlltool"
+      - "C:/VStools/cmake/bin/dlltool.com"
+      - "C:/VStools/cmake/bin/dlltool.exe"
+      - "C:/VStools/cmake/bin/dlltool"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/dlltool.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/dlltool.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/dlltool"
+      - "C:/VStools/ninja/dlltool.com"
+      - "C:/VStools/ninja/dlltool.exe"
+      - "C:/VStools/ninja/dlltool"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/dlltool.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/dlltool.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/dlltool"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/dlltool.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/dlltool.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/dlltool"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_ADDR2LINE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-addr2line"
+      - "addr2line"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-addr2line.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-addr2line.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeFindBinUtils.cmake:243 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:200 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_TAPI"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-tapi"
+      - "tapi"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-tapi.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-tapi.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-tapi"
+      - "C:/Windows/System32/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/arm-none-eabi-tapi"
+      - "C:/Windows/arm-none-eabi-tapi.com"
+      - "C:/Windows/arm-none-eabi-tapi.exe"
+      - "C:/Windows/arm-none-eabi-tapi"
+      - "C:/Windows/System32/wbem/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-tapi"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-tapi"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-tapi.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-tapi.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-tapi"
+      - "C:/VStools/cmake/bin/arm-none-eabi-tapi.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-tapi.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-tapi"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-tapi.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-tapi.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-tapi"
+      - "C:/VStools/ninja/arm-none-eabi-tapi.com"
+      - "C:/VStools/ninja/arm-none-eabi-tapi.exe"
+      - "C:/VStools/ninja/arm-none-eabi-tapi"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-tapi.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-tapi.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-tapi"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-tapi.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-tapi.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-tapi"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/tapi.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/tapi.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/tapi"
+      - "C:/Windows/System32/tapi.com"
+      - "C:/Windows/System32/tapi.exe"
+      - "C:/Windows/System32/tapi"
+      - "C:/Windows/tapi.com"
+      - "C:/Windows/tapi.exe"
+      - "C:/Windows/tapi"
+      - "C:/Windows/System32/wbem/tapi.com"
+      - "C:/Windows/System32/wbem/tapi.exe"
+      - "C:/Windows/System32/wbem/tapi"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/tapi"
+      - "C:/Windows/System32/OpenSSH/tapi.com"
+      - "C:/Windows/System32/OpenSSH/tapi.exe"
+      - "C:/Windows/System32/OpenSSH/tapi"
+      - "C:/VStools/cmake/bin/tapi.com"
+      - "C:/VStools/cmake/bin/tapi.exe"
+      - "C:/VStools/cmake/bin/tapi"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/tapi.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/tapi.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/tapi"
+      - "C:/VStools/ninja/tapi.com"
+      - "C:/VStools/ninja/tapi.exe"
+      - "C:/VStools/ninja/tapi"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/tapi.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/tapi.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/tapi"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/tapi.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/tapi.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/tapi"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-14.3"
+      - "arm-none-eabi-gcc-ar-14"
+      - "arm-none-eabi-gcc-ar14"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.3"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar14"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar14"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar14"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar14.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar14.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar14"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar14"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCCompiler.cmake:201 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_C_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-14.3"
+      - "arm-none-eabi-gcc-ranlib-14"
+      - "arm-none-eabi-gcc-ranlib14"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib14"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:71 (_cmake_find_compiler_path)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-g++"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-g++.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-g++.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/"
+      - "C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/cmake/"
+    found: "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-g++.exe 
+      Build flags: -fdata-sections;-ffunction-sections;-Wl,--gc-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+      Id flags:  
+      
+      The output was:
+      1
+      C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/ld.exe: C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib\\libc.a(libc_a-exit.o): in function `exit':
+      (.text.exit+0x28): undefined reference to `_exit'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:468 (find_file)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:506 (CMAKE_DETERMINE_COMPILER_ID_WRITE)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:8 (CMAKE_DETERMINE_COMPILER_ID_BUILD)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "file"
+    variable: "src_in"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "CMakeCXXCompilerId.cpp.in"
+    candidate_directories:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/"
+      - "C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/cmake/"
+    found: "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCXXCompilerId.cpp.in"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:125 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-g++.exe 
+      Build flags: -fdata-sections;-ffunction-sections;-Wl,--gc-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/4.3.1/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-14.3"
+      - "arm-none-eabi-gcc-ar-14"
+      - "arm-none-eabi-gcc-ar14"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.3"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.3"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.3"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-14"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-14"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-14"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar14"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar14"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar14"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar14.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar14.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar14"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar14"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar14"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCXXCompiler.cmake:207 (include)"
+      - "CMakeLists.txt:13 (project)"
+    mode: "program"
+    variable: "CMAKE_CXX_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-14.3"
+      - "arm-none-eabi-gcc-ranlib-14"
+      - "arm-none-eabi-gcc-ranlib14"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.3"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-14"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-14"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-14"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib14"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib14"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib14"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib14"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/CMakeScratch/TryCompile-ebvrmq"
+      binary: "C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/CMakeScratch/TryCompile-ebvrmq"
+    cmakeVariables:
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_C_FLAGS: "-fdata-sections -ffunction-sections -Wl,--gc-sections"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/cmake"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/CMakeScratch/TryCompile-ebvrmq'
+        
+        Run Build Command(s): C:/VStools/ninja/ninja.exe -v cmTC_1f849
+        [1/2] C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-gcc.exe   -fdata-sections -ffunction-sections -Wl,--gc-sections    -v -o CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj -c C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-gcc.exe
+        Target: arm-none-eabi
+        Configured with: /build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/src/gcc/configure --build=x86_64-linux-gnu --host=x86_64-w64-mingw32 --target=arm-none-eabi --prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw --libexecdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/lib --infodir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/info --mandir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/man --htmldir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/html --pdfdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-mingw-wildcard --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-headers=yes --with-newlib --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/arm-none-eabi --with-libiconv-prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-gmp=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-mpfr=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-mpc=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-isl=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Tools for STM32 14.3.rel1.20251027-0700' --with-multilib-list=rmprofile,aprofile
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) 
+        COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1f849.dir/'
+         C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1f849.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdata-sections -ffunction-sections -o C:\\Users\\Admin\\AppData\\Local\\Temp\\cc0yiTIQ.s
+        GNU C17 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)
+        	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
+        ignoring nonexistent directory "C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/include
+         C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+         C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include
+         C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: 6ff0de7787db02762f469a6076f3ba78
+        COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1f849.dir/'
+         C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj C:\\Users\\Admin\\AppData\\Local\\Temp\\cc0yiTIQ.s
+        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616
+        COMPILER_PATH=C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/;C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/;C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/VStools/gnu-tools-for-stm32/tools/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\VStools\\cmake\\bin\\cmake.exe -E rm -f libcmTC_1f849.a && C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-ar.exe qc libcmTC_1f849.a  CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj && C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-ranlib.exe libcmTC_1f849.a && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include] ==> [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include]
+        implicit include dirs: [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include;C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include-fixed;C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: 'C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/CMakeScratch/TryCompile-ebvrmq']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/VStools/ninja/ninja.exe -v cmTC_1f849]
+        ignore line: [[1/2] C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-gcc.exe   -fdata-sections -ffunction-sections -Wl --gc-sections    -v -o CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj -c C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-gcc.exe]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/src/gcc/configure --build=x86_64-linux-gnu --host=x86_64-w64-mingw32 --target=arm-none-eabi --prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw --libexecdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/lib --infodir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/info --mandir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/man --htmldir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/html --pdfdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-mingw-wildcard --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-headers=yes --with-newlib --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/arm-none-eabi --with-libiconv-prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-gmp=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-mpfr=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-mpc=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-isl=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Tools for STM32 14.3.rel1.20251027-0700' --with-multilib-list=rmprofile,aprofile]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1f849.dir/']
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1.exe -quiet -v -iprefix C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_1f849.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdata-sections -ffunction-sections -o C:\\Users\\Admin\\AppData\\Local\\Temp\\cc0yiTIQ.s]
+        ignore line: [GNU C17 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 7.3-win32 20180312  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/lib/gcc/arm-none-eabi/14.3.1/../../../../include"]
+        ignore line: [ignoring nonexistent directory "C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 6ff0de7787db02762f469a6076f3ba78]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1f849.dir/']
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj C:\\Users\\Admin\\AppData\\Local\\Temp\\cc0yiTIQ.s]
+        ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616]
+        ignore line: [COMPILER_PATH=C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/]
+        ignore line: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/]
+        ignore line: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
+        ignore line: [C:/VStools/gnu-tools-for-stm32/tools/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-v' '-o' 'CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\VStools\\cmake\\bin\\cmake.exe -E rm -f libcmTC_1f849.a && C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-ar.exe qc libcmTC_1f849.a  CMakeFiles/cmTC_1f849.dir/CMakeCCompilerABI.c.obj && C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-ranlib.exe libcmTC_1f849.a && cd ."]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/CMakeScratch/TryCompile-klqel1"
+      binary: "C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/CMakeScratch/TryCompile-klqel1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-fdata-sections -ffunction-sections -Wl,--gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics"
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_MODULE_PATH: "C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/cmake"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/CMakeScratch/TryCompile-klqel1'
+        
+        Run Build Command(s): C:/VStools/ninja/ninja.exe -v cmTC_debec
+        [1/2] C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-g++.exe   -fdata-sections -ffunction-sections -Wl,--gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj -c C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-g++.exe
+        Target: arm-none-eabi
+        Configured with: /build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/src/gcc/configure --build=x86_64-linux-gnu --host=x86_64-w64-mingw32 --target=arm-none-eabi --prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw --libexecdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/lib --infodir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/info --mandir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/man --htmldir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/html --pdfdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-mingw-wildcard --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-headers=yes --with-newlib --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/arm-none-eabi --with-libiconv-prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-gmp=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-mpfr=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-mpc=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-isl=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Tools for STM32 14.3.rel1.20251027-0700' --with-multilib-list=rmprofile,aprofile
+        Thread model: single
+        Supported LTO compression algorithms: zlib
+        gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) 
+        COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_debec.dir/'
+         C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_debec.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\Admin\\AppData\\Local\\Temp\\ccTGDYTw.s
+        GNU C++17 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)
+        	compiled by GNU C version 7.3-win32 20180312, GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/lib/gcc/arm-none-eabi/14.3.1/../../../../include"
+        ignoring nonexistent directory "C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1
+         C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi
+         C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward
+         C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/include
+         C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+         C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1
+         C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi
+         C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward
+         C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include
+         C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed
+         C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: 43d99ff7460098f9cee06aa2d6324907
+        COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_debec.dir/'
+         C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\Admin\\AppData\\Local\\Temp\\ccTGDYTw.s
+        GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616
+        COMPILER_PATH=C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/;C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/;C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/;C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/;C:/VStools/gnu-tools-for-stm32/tools/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\VStools\\cmake\\bin\\cmake.exe -E rm -f libcmTC_debec.a && C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-ar.exe qc libcmTC_debec.a  CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj && C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-ranlib.exe libcmTC_debec.a && cd ."
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:217 (message)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+          add: [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1] ==> [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include/c++/14.3.1]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi] ==> [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward] ==> [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include/c++/14.3.1/backward]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/include] ==> [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1] ==> [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include/c++/14.3.1]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi] ==> [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward] ==> [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include/c++/14.3.1/backward]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include] ==> [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed] ==> [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        collapse include dir [C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include] ==> [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include]
+        implicit include dirs: [C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include/c++/14.3.1;C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include/c++/14.3.1/arm-none-eabi;C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include/c++/14.3.1/backward;C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include;C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/arm-none-eabi/14.3.1/include-fixed;C:/VStools/gnu-tools-for-stm32/tools/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerABI.cmake:253 (message)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:13 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        linker tool regex: [^[ 	]*(->|"|[0-9]+>[ 	-]*Build:[ 	0-9]+ ms[ 	]*)?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
+        ignore line: [Change Dir: 'C:/project/Cmake/STM32F407_cubeFATfs_JSON_28082026/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/CMakeScratch/TryCompile-klqel1']
+        ignore line: []
+        ignore line: [Run Build Command(s): C:/VStools/ninja/ninja.exe -v cmTC_debec]
+        ignore line: [[1/2] C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-g++.exe   -fdata-sections -ffunction-sections -Wl --gc-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics    -v -o CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj -c C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-g++.exe]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/src/gcc/configure --build=x86_64-linux-gnu --host=x86_64-w64-mingw32 --target=arm-none-eabi --prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw --libexecdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/lib --infodir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/info --mandir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/man --htmldir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/html --pdfdir=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/share/doc/gcc-arm-none-eabi/pdf --enable-languages=c,c++ --enable-mingw-wildcard --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-shared --disable-threads --disable-tls --with-gnu-as --with-gnu-ld --with-headers=yes --with-newlib --with-python-dir=share/gcc-arm-none-eabi --with-sysroot=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/arm-none-eabi --with-libiconv-prefix=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-gmp=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-mpfr=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-mpc=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-isl=/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/build-mingw/host-libs/usr --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --with-pkgversion='GNU Tools for STM32 14.3.rel1.20251027-0700' --with-multilib-list=rmprofile,aprofile]
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib]
+        ignore line: [gcc version 14.3.1 20250623 (GNU Tools for STM32 14.3.rel1.20251027-0700) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_debec.dir/']
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/cc1plus.exe -quiet -v -iprefix C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/ -isysroot C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi -D__USES_INITFINI__ C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_debec.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=arm7tdmi -mfloat-abi=soft -marm -mlibarch=armv4t -march=armv4t -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o C:\\Users\\Admin\\AppData\\Local\\Temp\\ccTGDYTw.s]
+        ignore line: [GNU C++17 (GNU Tools for STM32 14.3.rel1.20251027-0700) version 14.3.1 20250623 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 7.3-win32 20180312  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring nonexistent directory "C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi/build/gnu-tools-for-stm32_14.3.rel1.20251027-0700/install-mingw/lib/gcc/arm-none-eabi/14.3.1/../../../../include"]
+        ignore line: [ignoring nonexistent directory "C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../arm-none-eabi/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+        ignore line: [ C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+        ignore line: [ C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+        ignore line: [ C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1]
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/arm-none-eabi]
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include/c++/14.3.1/backward]
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include]
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/include-fixed]
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/lib/gcc/../../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 43d99ff7460098f9cee06aa2d6324907]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_debec.dir/']
+        ignore line: [ C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/as.exe -v -march=armv4t -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\Admin\\AppData\\Local\\Temp\\ccTGDYTw.s]
+        ignore line: [GNU assembler version 2.44.0 (arm-none-eabi) using BFD version (GNU Tools for STM32 14.3.rel1.20251027-0700) 2.44.0.20250616]
+        ignore line: [COMPILER_PATH=C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/]
+        ignore line: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/]
+        ignore line: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/]
+        ignore line: [C:/VStools/gnu-tools-for-stm32/tools/bin/../lib/gcc/arm-none-eabi/14.3.1/../../../../arm-none-eabi/lib/]
+        ignore line: [C:/VStools/gnu-tools-for-stm32/tools/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-v' '-o' 'CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mcpu=arm7tdmi' '-mfloat-abi=soft' '-marm' '-mlibarch=armv4t' '-march=armv4t' '-dumpdir' 'CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] C:\\WINDOWS\\system32\\cmd.exe /C "cd . && C:\\VStools\\cmake\\bin\\cmake.exe -E rm -f libcmTC_debec.a && C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-ar.exe qc libcmTC_debec.a  CMakeFiles/cmTC_debec.dir/CMakeCXXCompilerABI.cpp.obj && C:\\VStools\\gnu-tools-for-stm32\\tools\\bin\\arm-none-eabi-ranlib.exe libcmTC_debec.a && cd ."]
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompiler.cmake:115 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:64 (_cmake_find_compiler_path)"
+      - "CMakeLists.txt:14 (enable_language)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_WITH_PATH"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/STM32F407_cubeLed"
+      CMAKE_SYSTEM_PROGRAM_PATH:
+        - "/bin"
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineCompilerId.cmake:1296 (message)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:170 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:14 (enable_language)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc.exe (GNU Tools for STM32 14.3.rel1.20251027-0700) 14.3.1 20250623
+      Copyright (C) 2024 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:18 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
+      - "CMakeLists.txt:14 (enable_language)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_AR"
+    description: "A wrapper around 'ar' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ar-"
+      - "arm-none-eabi-gcc-ar-"
+      - "arm-none-eabi-gcc-ar"
+      - "arm-none-eabi-gcc-ar"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-"
+      - "/bin/arm-none-eabi-gcc-ar-.com"
+      - "/bin/arm-none-eabi-gcc-ar-.exe"
+      - "/bin/arm-none-eabi-gcc-ar-"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ar-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ar-"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ar-"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ar-"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ar-"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ar-"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ar-"
+      - "/bin/arm-none-eabi-gcc-ar-.com"
+      - "/bin/arm-none-eabi-gcc-ar-.exe"
+      - "/bin/arm-none-eabi-gcc-ar-"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ar.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/STM32F407_cubeLed"
+      CMAKE_SYSTEM_PROGRAM_PATH:
+        - "/bin"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU-FindBinUtils.cmake:30 (find_program)"
+      - "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeDetermineASMCompiler.cmake:268 (include)"
+      - "CMakeLists.txt:14 (enable_language)"
+    mode: "program"
+    variable: "CMAKE_ASM_COMPILER_RANLIB"
+    description: "A wrapper around 'ranlib' adding the appropriate '--plugin' option for the GCC compiler"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: false
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "arm-none-eabi-gcc-ranlib-"
+      - "arm-none-eabi-gcc-ranlib-"
+      - "arm-none-eabi-gcc-ranlib"
+      - "arm-none-eabi-gcc-ranlib"
+    candidate_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/VStools/cmake/bin/"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/"
+      - "C:/VStools/ninja/"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "/bin/"
+    searched_directories:
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-"
+      - "/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/wbem/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/arm-none-eabi-gcc-ranlib-"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Windows/System32/OpenSSH/arm-none-eabi-gcc-ranlib-"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/VStools/cmake/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/VStools/OpenOCD-20250710-0.12.0/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/VStools/ninja/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps/arm-none-eabi-gcc-ranlib-"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "C:/Users/Admin/AppData/Local/Programs/Microsoft VS Code/bin/arm-none-eabi-gcc-ranlib-"
+      - "/bin/arm-none-eabi-gcc-ranlib-.com"
+      - "/bin/arm-none-eabi-gcc-ranlib-.exe"
+      - "/bin/arm-none-eabi-gcc-ranlib-"
+      - "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib.com"
+    found: "C:/VStools/gnu-tools-for-stm32/tools/bin/arm-none-eabi-gcc-ranlib.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:/VStools/gnu-tools-for-stm32/tools/bin"
+        - "C:/WINDOWS/system32"
+        - "C:\\WINDOWS"
+        - "C:/WINDOWS/System32/Wbem"
+        - "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:/WINDOWS/System32/OpenSSH/"
+        - "C:\\VStools\\cmake\\bin"
+        - "C:/VStools/OpenOCD-20250710-0.12.0/bin"
+        - "C:\\VStools\\ninja\\"
+        - "C:/Users/Admin/AppData/Local/Microsoft/WindowsApps"
+        - "C:\\Users\\Admin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/STM32F407_cubeLed"
+      CMAKE_SYSTEM_PROGRAM_PATH:
+        - "/bin"
+...
