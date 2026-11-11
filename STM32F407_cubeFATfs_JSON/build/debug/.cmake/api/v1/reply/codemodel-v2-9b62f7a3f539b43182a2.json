@@ -14,7 +14,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "hal_stm32f4xx::@b8983a0bfb9f6cf9582c",
-					"jsonFile" : "target-hal_stm32f4xx-Debug-1e41bca7b2db1d02b474.json",
+					"jsonFile" : "target-hal_stm32f4xx-Debug-616a17d2f04eb132d88b.json",
 					"name" : "hal_stm32f4xx",
 					"projectIndex" : 0
 				}
@@ -98,7 +98,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "STM32F407_cubeLed::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-STM32F407_cubeLed-Debug-341b17c93fab2a4442e0.json",
+					"jsonFile" : "target-STM32F407_cubeLed-Debug-59ffbb0b09c4454ec9e8.json",
 					"name" : "STM32F407_cubeLed",
 					"projectIndex" : 0
 				}

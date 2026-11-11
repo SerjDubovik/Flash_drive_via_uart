@@ -35,3 +35,6 @@ C:\II\STM32\SdCardBrowser\obj\Release\net10.0-windows\SdCardBrowser.genruntimeco
 C:\II\STM32\SdCardBrowser\obj\Release\net10.0-windows\ref\SdCardBrowser.dll
 C:\II\STM32\SdCardBrowser\obj\Release\net10.0-windows\SdCardBrowser.BrowserForm.resources
 C:\II\STM32\SdCardBrowser\obj\Release\net10.0-windows\SdCardBrowser.csproj.GenerateResource.cache
+C:\II\STM32\SdCardBrowser\obj\Release\net10.0-windows\SdCardBrowser.BrowserForm.Copy.resources
+C:\II\STM32\SdCardBrowser\obj\Release\net10.0-windows\SdCardBrowser.BrowserForm.Panes.resources
+C:\II\STM32\SdCardBrowser\obj\Release\net10.0-windows\SdCardBrowser.sourcelink.json

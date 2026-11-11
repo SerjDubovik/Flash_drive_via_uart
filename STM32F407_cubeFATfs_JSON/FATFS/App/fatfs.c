@@ -17,6 +17,7 @@
   */
 /* USER CODE END Header */
 #include "fatfs.h"
+#include "w25q16_diskio.h"
 
 uint8_t retSD;    /* Return value for SD */
 char SDPath[4];   /* SD logical drive path */
@@ -24,6 +25,9 @@ FATFS SDFatFS;    /* File system object for SD logical drive */
 FIL SDFile;       /* File object for SD */
 
 /* USER CODE BEGIN Variables */
+uint8_t retNOR = 1;
+FATFS NorFatFS;
+static char nor_path[4];
 
 /* USER CODE END Variables */
 
@@ -33,7 +37,7 @@ void MX_FATFS_Init(void)
   retSD = FATFS_LinkDriver(&SD_Driver, SDPath);
 
   /* USER CODE BEGIN Init */
-  /* additional user code for init */
+  if (retSD == 0) retNOR = FATFS_LinkDriver(&W25Q16_Driver, nor_path);
   /* USER CODE END Init */
 }
 

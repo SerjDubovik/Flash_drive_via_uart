@@ -99,12 +99,12 @@ internal sealed partial class BrowserForm
                 CardEntry? match = existing.Find(entry => StringComparer.OrdinalIgnoreCase.Equals(entry.Name, name));
                 if (match is { IsDirectory: true })
                 {
-                    ReportError($"Имя «{name}» уже занято папкой на карте.");
+                    ReportError($"Имя «{name}» уже занято папкой на накопителе.");
                     continue;
                 }
-                if (match is not null && !ConfirmCopyReplacement(name, "на карте")) continue;
+                if (match is not null && !ConfirmCopyReplacement(name, "на накопителе")) continue;
 
-                Action<int> progress = TransferProgress("Запись на карту", name);
+                Action<int> progress = TransferProgress("Запись на накопитель", name);
                 await Task.Run(() =>
                 {
                     using var source = File.OpenRead(localPath);
@@ -115,7 +115,7 @@ internal sealed partial class BrowserForm
                 if (StringComparer.OrdinalIgnoreCase.Equals(targetDirectory, _path))
                     await LoadDirectoryAsync(client, _path);
             }
-            statusLabel.Text = $"Скопировано на карту: {copied}.";
+            statusLabel.Text = $"Скопировано на накопитель: {copied}.";
         });
     }
 

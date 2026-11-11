@@ -7,22 +7,24 @@ internal sealed record CardEntry(string Name, bool IsDirectory, uint Size);
 
 internal sealed class FatFsException(int result) : IOException(Describe(result))
 {
+    public int Result { get; } = result;
     public bool RequiresReconnect { get; } = result is 1 or 2 or 3 or 9 or 12 or 13 or 15 or 16 or 18;
 
     private static string Describe(int result)
     {
         string detail = result switch
         {
-            1 => "Ошибка ввода-вывода карты",
-            3 => "Карта не готова",
+            1 => "Ошибка ввода-вывода накопителя",
+            3 => "Накопитель не готов",
             4 => "Файл не найден",
             5 => "Папка не найдена",
             6 => "Недопустимое имя или путь",
             7 => "Операция запрещена, папка непуста или на карте нет места",
             8 => "Объект с таким именем уже существует",
-            10 => "Карта защищена от записи",
-            12 => "Карта не смонтирована",
-            13 => "На карте не найдена файловая система FAT",
+            10 => "Накопитель защищён от записи",
+            12 => "Накопитель не смонтирован",
+            13 => "На накопителе не найдена файловая система FAT",
+            14 => "Не удалось создать файловую систему FAT",
             15 => "Истекло время ожидания на плате",
             19 => "Плата отклонила параметры команды",
             _ => "Ошибка файловой системы"
@@ -41,32 +43,43 @@ internal sealed class CardClient : IDisposable
     private bool _supportsTransfer;
     private uint _nextId = (uint)Random.Shared.NextInt64(1, uint.MaxValue);
 
-    private CardClient(string portName)
+    private CardClient(string portName, int baudRate)
     {
-        _port = new SerialPort(portName, 115200, Parity.None, 8, StopBits.One)
+        _port = new SerialPort(portName, baudRate, Parity.None, 8, StopBits.One)
         {
             Handshake = Handshake.None,
             NewLine = "\n",
             ReadTimeout = 12000,
-            WriteTimeout = 3000
+            WriteTimeout = 12000
         };
     }
 
-    public static CardClient Connect(string portName)
+    public static CardClient Open(string portName, int baudRate)
     {
-        var client = new CardClient(portName);
+        var client = new CardClient(portName, baudRate);
         try
         {
             client._port.Open();
             client._port.DiscardInBuffer();
-            client.Exchange("mount", null, null, null, onResult: reply =>
-                client._supportsTransfer = reply.TryGetProperty("version", out var version) && version.GetInt32() >= 2);
             return client;
         }
         catch
         {
             client.Dispose();
             throw;
+        }
+    }
+
+    public void Mount(bool nor)
+    {
+        try
+        {
+            Exchange(nor ? "mntnor" : "mount", null, null, null, onResult: reply =>
+                _supportsTransfer = reply.TryGetProperty("version", out var version) && version.GetInt32() >= 2);
+        }
+        catch (FatFsException ex) when (nor && ex.Result is 6 or 19)
+        {
+            throw new IOException("Прошивка STM32 не поддерживает том W25Q16. Обновите её и подключитесь снова.", ex);
         }
     }
 
@@ -81,6 +94,28 @@ internal sealed class CardClient : IDisposable
                 reply.GetProperty("size").GetUInt32()));
         });
         return entries;
+    }
+
+    public ulong? GetFreeBytes()
+    {
+        ulong bytes = 0;
+        int timeout = _port.ReadTimeout;
+        try
+        {
+            // FatFs may scan the allocation table on the first query after a mount.
+            _port.ReadTimeout = 60000;
+            Exchange("space", null, null, reply => bytes = reply.GetProperty("freeBytes").GetUInt64(),
+                singlePayload: true);
+            return bytes;
+        }
+        catch (FatFsException)
+        {
+            return null;
+        }
+        finally
+        {
+            _port.ReadTimeout = timeout;
+        }
     }
 
     public void Execute(string operation, string? path = null, string? destination = null) =>

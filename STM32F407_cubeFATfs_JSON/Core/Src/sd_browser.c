@@ -2,6 +2,7 @@
 
 #include "fatfs.h"
 #include "usart_ring.h"
+#include "w25q16.h"
 
 #include <stdbool.h>
 #include <stdio.h>
@@ -48,7 +49,9 @@ static Transfer transfer;
 static _Alignas(4) BYTE block[BLOCK_SIZE];
 static size_t frame_length;
 static bool receiving;
-static const TCHAR drive[] = u"0:";
+static const TCHAR sd_drive[] = u"0:";
+static const TCHAR nor_drive[] = u"1:";
+static const TCHAR *drive = sd_drive;
 
 static void skip_space(const char **cursor)
 {
@@ -229,8 +232,9 @@ static bool valid_path(const TCHAR *path)
 
 static bool transmit(int length)
 {
-    return length > 0 && (size_t)length < sizeof(response) &&
-           HAL_UART_Transmit(&MYUART, (uint8_t *)response, (uint16_t)length, 500) == HAL_OK;
+    if (length <= 0 || (size_t)length >= sizeof(response)) return false;
+    uint32_t timeout = 500U + (uint32_t)length * 10000U / MYUART.Init.BaudRate;
+    return HAL_UART_Transmit(&MYUART, (uint8_t *)response, (uint16_t)length, timeout) == HAL_OK;
 }
 
 static void send_result(uint32_t id, FRESULT result)
@@ -471,17 +475,96 @@ static FRESULT begin_download(const Request *req)
         (unsigned long)transfer.size)) ? FR_OK : FR_TIMEOUT;
 }
 
+static FRESULT flash_diagnostics(uint32_t id)
+{
+    uint8_t jedec[3] = {0};
+    uint8_t status[2] = {0};
+    uint8_t sample[16];
+    char hex[sizeof(sample) * 2 + 1] = {0};
+
+    HAL_StatusTypeDef spi = W25Q16_ReadJedecId(jedec);
+    bool detected = spi == HAL_OK && W25Q16_MatchesId(jedec);
+    if (detected) {
+        spi = W25Q16_ReadStatus(status);
+        if (spi == HAL_OK && !(status[0] & W25Q16_STATUS_BUSY)) {
+            spi = W25Q16_Read(0, sample, sizeof(sample));
+            if (spi == HAL_OK) {
+                for (size_t i = 0; i < sizeof(sample); ++i) {
+                    snprintf(hex + i * 2, 3, "%02X", (unsigned)sample[i]);
+                }
+            }
+        }
+    }
+
+    if (!transmit(snprintf(response, sizeof(response),
+        "{\"id\":%lu,\"jedec\":\"%02X%02X%02X\",\"detected\":%s,"
+        "\"sr1\":%u,\"sr2\":%u,\"data\":\"%s\",\"spi\":%u}\n",
+        (unsigned long)id, (unsigned)jedec[0], (unsigned)jedec[1], (unsigned)jedec[2],
+        detected ? "true" : "false", (unsigned)status[0], (unsigned)status[1], hex, (unsigned)spi))) {
+        return FR_TIMEOUT;
+    }
+    if (spi == HAL_TIMEOUT) return FR_TIMEOUT;
+    return detected && spi == HAL_OK ? FR_OK : FR_NOT_READY;
+}
+
+static FRESULT mount_volume(bool nor)
+{
+    FRESULT result = abort_transfer();
+    if (result != FR_OK) return result;
+    if (nor ? retNOR != 0 : retSD != 0) return FR_NOT_READY;
+
+    const TCHAR *requested = nor ? nor_drive : sd_drive;
+    result = f_mount(nor ? &NorFatFS : &SDFatFS, requested, 1);
+    if (result == FR_OK) {
+        result = f_chdrive(requested);
+        if (result == FR_OK) drive = requested;
+    }
+    return result;
+}
+
+static FRESULT initialize_nor(void)
+{
+    static _Alignas(4) BYTE workspace[W25Q16_ERASE_SIZE];
+    if (transfer.mode != TRANSFER_NONE) return FR_LOCKED;
+    if (retNOR != 0) return FR_NOT_READY;
+
+    FRESULT result = f_mount(&NorFatFS, nor_drive, 1);
+    if (result == FR_OK) return FR_EXIST;
+    if (result != FR_NO_FILESYSTEM) return result;
+
+    return f_mkfs(nor_drive, FM_FAT | FM_SFD, W25Q16_ERASE_SIZE, workspace, sizeof(workspace));
+}
+
+static FRESULT report_free_space(uint32_t id)
+{
+    DWORD free_clusters;
+    FATFS *volume;
+    FRESULT result = f_getfree(drive, &free_clusters, &volume);
+    if (result != FR_OK) return result;
+
+    uint64_t bytes = (uint64_t)free_clusters * volume->csize;
+#if _MAX_SS != _MIN_SS
+    bytes *= volume->ssize;
+#else
+    bytes *= _MIN_SS;
+#endif
+    return transmit(snprintf(response, sizeof(response),
+        "{\"id\":%lu,\"freeBytes\":%llu}\n", (unsigned long)id,
+        (unsigned long long)bytes)) ? FR_OK : FR_TIMEOUT;
+}
+
 static FRESULT execute(Request *req)
 {
-    if (equal(req->op, u"mount")) {
-        abort_transfer();
-        return retSD == 0 ? f_mount(&SDFatFS, drive, 1) : FR_NOT_READY;
-    }
+    if (equal(req->op, u"flashid") && !req->fields) return flash_diagnostics(req->id);
+    if (equal(req->op, u"mount") && !req->fields) return mount_volume(false);
+    if (equal(req->op, u"mntnor") && !req->fields) return mount_volume(true);
+    if (equal(req->op, u"norinit") && !req->fields) return initialize_nor();
     if (equal(req->op, u"abort") && !req->fields) return abort_transfer();
     if (equal(req->op, u"finish") && !req->fields) return finish_transfer();
     if (equal(req->op, u"read") && req->fields == OFFSET) return read_block(req);
     if (equal(req->op, u"write") && req->fields == (OFFSET | FIELD_CRC | DATA)) return write_block(req);
     if (transfer.mode != TRANSFER_NONE) return FR_LOCKED;
+    if (equal(req->op, u"space") && !req->fields) return report_free_space(req->id);
     if (!valid_path(req->path)) return FR_INVALID_NAME;
     if (equal(req->op, u"list")) return list_directory(req);
     if (!req->path[1]) return FR_INVALID_NAME;
@@ -527,8 +610,8 @@ void SD_Browser_Poll(void)
             receiving = false;
             frame[frame_length] = 0;
             FRESULT result = parse_request(frame) ? execute(&request) : FR_INVALID_PARAMETER;
-            if (result == FR_OK && equal(request.op, u"mount")) {
-                transmit(snprintf(response, sizeof(response), "{\"id\":%lu,\"result\":0,\"version\":2}\n",
+            if (result == FR_OK && (equal(request.op, u"mount") || equal(request.op, u"mntnor"))) {
+                transmit(snprintf(response, sizeof(response), "{\"id\":%lu,\"result\":0,\"version\":3}\n",
                     (unsigned long)request.id));
             } else {
                 send_result(request.id, result);

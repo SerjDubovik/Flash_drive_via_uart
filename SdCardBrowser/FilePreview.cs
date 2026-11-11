@@ -53,7 +53,7 @@ internal static class FilePreview
             WordWrap = false, AcceptsReturn = true, AcceptsTab = true, ReadOnly = readOnly,
             MaxLength = (int)MaxTextBytes * 2, Text = savedText
         };
-        var saveButton = new Button { Text = "Сохранить на карту", AutoSize = true, Visible = !readOnly };
+        var saveButton = new Button { Text = "Сохранить на накопитель", AutoSize = true, Visible = !readOnly };
         var closeButton = new Button { Text = "Закрыть", AutoSize = true };
         var status = new Label
         {
@@ -119,18 +119,18 @@ internal static class FilePreview
             pending = cancellation;
             closeButton.Text = "Отменить запись";
             editor.ReadOnly = true;
-            status.Text = "Запись на карту…";
+            status.Text = "Запись на накопитель…";
             UpdateSaveButton();
             var progress = new Progress<int>(percent =>
             {
-                if (pending == cancellation) status.Text = $"Запись на карту… {percent}%";
+                if (pending == cancellation) status.Text = $"Запись на накопитель… {percent}%";
             });
             try
             {
                 if (await save(dialog, bytes, cancellation.Token, ((IProgress<int>)progress).Report))
                 {
                     savedText = edited;
-                    status.Text = "Сохранено на карте";
+                    status.Text = "Сохранено на накопителе";
                 }
                 else
                 {

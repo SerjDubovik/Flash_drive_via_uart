@@ -39,6 +39,8 @@ extern FIL SDFile; /* File object for SD */
 void MX_FATFS_Init(void);
 
 /* USER CODE BEGIN Prototypes */
+extern uint8_t retNOR;
+extern FATFS NorFatFS;
 
 /* USER CODE END Prototypes */
 #ifdef __cplusplus

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SdCardBrowser")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+de408e5742c2b827e876b12721ac2bb8fc0a0f15")]
 [assembly: System.Reflection.AssemblyProductAttribute("SdCardBrowser")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SdCardBrowser")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

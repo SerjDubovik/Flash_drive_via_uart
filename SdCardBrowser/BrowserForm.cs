@@ -8,11 +8,20 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
     private readonly FolderHistory _cardHistory = new();
     private string _path => _cardHistory.Current ?? "/";
     private bool _busy;
+    private bool _closeRequested;
     private CancellationTokenSource? _transfer;
 
     public BrowserForm()
     {
         InitializeComponent();
+        baudComboBox.SelectedItem = 115200;
+        exitMenuItem.Click += (_, _) => Close();
+        mediumComboBox.SelectedIndex = 0;
+        mediumComboBox.SelectedIndexChanged += async (_, _) =>
+        {
+            cardHeading.Text = mediumComboBox.SelectedIndex == 1 ? "W25Q16 STM32" : "SD-карта STM32";
+            if (_client is not null) await RunAsync(MountSelectedAsync);
+        };
 
         scanButton.Click += (_, _) => ScanPorts();
         portsComboBox.SelectedIndexChanged += (_, _) => UpdateControls();
@@ -41,6 +50,7 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         {
             if (_busy)
             {
+                _closeRequested = true;
                 _transfer?.Cancel();
                 e.Cancel = true;
                 return;
@@ -95,7 +105,8 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
     {
         bool connected = _client is not null;
         bool ready = connected && !_busy;
-        portsComboBox.Enabled = scanButton.Enabled = !connected && !_busy;
+        baudComboBox.Enabled = portsComboBox.Enabled = scanButton.Enabled = !connected && !_busy;
+        mediumComboBox.Enabled = !_busy;
         connectButton.Enabled = !_busy && (connected || portsComboBox.SelectedItem is not null);
         connectButton.Text = connected ? "Отключиться" : "Подключиться";
         refreshButton.Enabled = createButton.Enabled = mkdirButton.Enabled = filesListView.Enabled = ready;
@@ -143,6 +154,7 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         {
             _busy = false;
             UpdateControls();
+            if (_closeRequested) BeginInvoke(Close);
         }
         return false;
     }
@@ -150,7 +162,8 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
     private void ReportError(string message, Form? owner = null)
     {
         statusLabel.Text = message;
-        MessageBox.Show(owner ?? this, message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        if (!_closeRequested)
+            MessageBox.Show(owner ?? this, message, "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
     }
 
     private async Task ToggleConnectionAsync()
@@ -163,12 +176,53 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
             return;
         }
 
-        if (portsComboBox.SelectedItem is not string port) return;
+        if (portsComboBox.SelectedItem is not string port || baudComboBox.SelectedItem is not int baudRate) return;
         await RunAsync(async () =>
         {
-            _client = await Task.Run(() => CardClient.Connect(port));
-            await LoadDirectoryAsync(_client, "/");
+            _client = await Task.Run(() => CardClient.Open(port, baudRate));
+            await MountSelectedAsync();
         });
+    }
+
+    private async Task MountSelectedAsync()
+    {
+        if (_client is not { } client) return;
+        bool nor = mediumComboBox.SelectedIndex == 1;
+        filesListView.Items.Clear();
+        freeSpaceLabel.Text = "Свободно —";
+        _cardHistory.Clear();
+        SetLocation("/");
+
+        try
+        {
+            try
+            {
+                await Task.Run(() => client.Mount(nor));
+            }
+            catch (FatFsException ex) when (nor && ex.Result == 13)
+            {
+                var choice = MessageBox.Show(this,
+                    "На W25Q16 не найдена файловая система FAT. Создать её? Данные, записанные ранее, могут стать недоступны.",
+                    "Инициализация W25Q16", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
+                if (choice != DialogResult.Yes)
+                {
+                    Disconnect();
+                    statusLabel.Text = "Инициализация W25Q16 отменена.";
+                    return;
+                }
+
+                statusLabel.Text = "Создаётся файловая система на W25Q16…";
+                await Task.Run(() => client.Execute("norinit"));
+                await Task.Run(() => client.Mount(true));
+            }
+
+            await LoadDirectoryAsync(client, "/");
+        }
+        catch
+        {
+            Disconnect();
+            throw;
+        }
     }
 
     private void Disconnect()
@@ -184,6 +238,7 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
             // The USB adapter may already be disconnected.
         }
         filesListView.Items.Clear();
+        freeSpaceLabel.Text = "Свободно —";
         _cardHistory.Clear();
         SetLocation("/");
     }
@@ -254,6 +309,8 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         SetLocation(path);
         _cardHistory.Visit(path, historyStep);
         statusLabel.Text = $"{portsComboBox.SelectedItem} • Элементов: {entries.Count}";
+        ulong? freeBytes = await Task.Run(client.GetFreeBytes);
+        freeSpaceLabel.Text = freeBytes is ulong bytes ? $"Свободно {bytes:N0} байт" : "Свободно —";
     }
 
     private async Task CreateAsync(bool directory)
@@ -268,7 +325,7 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         if (Selected is not { } entry) return;
         string? value = rename
             ? Prompt("Переименовать", "Новое имя", entry.Name)
-            : Prompt("Переместить", "Путь существующей папки на карте, например /Архив", _path);
+            : Prompt("Переместить", "Путь существующей папки на накопителе, например /Архив", _path);
         if (value is null) return;
         if (rename && !CheckName(value)) return;
         if (!rename && !value.StartsWith('/'))
@@ -286,7 +343,7 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
     {
         if (Selected is not { } entry) return;
         string target = Join(_path, entry.Name);
-        if (MessageBox.Show(this, $"Удалить «{target}»?", "Удаление с карты",
+        if (MessageBox.Show(this, $"Удалить «{target}»?", "Удаление с накопителя",
             MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2) == DialogResult.Yes)
             await ChangeAsync("delete", target);
     }
@@ -337,7 +394,7 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
     private async Task UploadAsync()
     {
         if (_client is null || _busy) return;
-        using var dialog = new OpenFileDialog { Title = "Файлы для записи на SD-карту", Multiselect = true };
+        using var dialog = new OpenFileDialog { Title = "Файлы для записи на накопитель", Multiselect = true };
         if (dialog.ShowDialog(this) == DialogResult.OK)
             await UploadFilesAsync(dialog.FileNames, _path);
     }
@@ -347,7 +404,7 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         if (_client is not { } client || Selected is not { IsDirectory: false } entry) return;
         using var dialog = new SaveFileDialog
         {
-            Title = "Сохранить файл с SD-карты",
+            Title = "Сохранить файл на ПК",
             FileName = entry.Name,
             AddExtension = false
         };

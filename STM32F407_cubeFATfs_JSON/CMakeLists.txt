@@ -34,8 +34,8 @@ set(cpu_PARAMS
     -mfloat-abi=hard
 )
     
-file(GLOB_RECURSE  sources_SRCS
-    ${CMAKE_CURRENT_LIST_DIR}/Core/src/*.c
+file(GLOB_RECURSE sources_SRCS CONFIGURE_DEPENDS
+    ${CMAKE_CURRENT_LIST_DIR}/Core/Src/*.c
     ${CMAKE_CURRENT_LIST_DIR}/FATFS/App/*.c
     ${CMAKE_CURRENT_LIST_DIR}/FATFS/Target/*.c
     ${CMAKE_CURRENT_LIST_DIR}/Middlewares/Third_Party/FatFs/src/*.c
@@ -45,7 +45,7 @@ file(GLOB_RECURSE  sources_SRCS
 
 # Include directories for all compilers
 set(include_DIRS
-${CMAKE_CURRENT_LIST_DIR}/Core/inc
+${CMAKE_CURRENT_LIST_DIR}/Core/Inc
 ${CMAKE_CURRENT_LIST_DIR}/FATFS/App
 ${CMAKE_CURRENT_LIST_DIR}/FATFS/Target
 ${CMAKE_CURRENT_LIST_DIR}/Middlewares/Third_Party/FatFs/src
@@ -152,6 +152,7 @@ target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE
 )
 
 # Linker options
+set_property(TARGET ${CMAKE_PROJECT_NAME} APPEND PROPERTY LINK_DEPENDS ${linker_script_SRC})
 target_link_options(${CMAKE_PROJECT_NAME} PRIVATE
     -T${linker_script_SRC}
     ${cpu_PARAMS}

@@ -7,8 +7,18 @@ partial class BrowserForm
         layout = new TableLayoutPanel();
         actionsPanel = new Panel();
         portsComboBox = new ComboBox();
+        baudComboBox = new ComboBox();
+        mainMenu = new MenuStrip();
+        fileMenu = new ToolStripMenuItem("Файл");
+        viewMenu = new ToolStripMenuItem("Вид");
+        paneMenu = new ToolStripMenuItem("Область");
+        helpMenu = new ToolStripMenuItem("Справка");
+        exitMenuItem = new ToolStripMenuItem("Выход");
+        footerPanel = new TableLayoutPanel();
+        freeSpaceLabel = new Label();
         scanButton = new Button();
         connectButton = new Button();
+        mediumComboBox = new ComboBox();
         refreshButton = new Button();
         createButton = new Button();
         mkdirButton = new Button();
@@ -56,7 +66,7 @@ partial class BrowserForm
         layout.Controls.Add(actionsPanel, 0, 0);
         layout.Controls.Add(panes, 0, 1);
         layout.Controls.Add(statusLabel, 0, 2);
-        layout.Controls.Add(transferProgress, 0, 3);
+        layout.Controls.Add(footerPanel, 0, 3);
         layout.Dock = DockStyle.Fill;
         layout.Location = new Point(0, 0);
         layout.Name = "layout";
@@ -74,6 +84,8 @@ partial class BrowserForm
         actionsPanel.Controls.Add(portsComboBox);
         actionsPanel.Controls.Add(scanButton);
         actionsPanel.Controls.Add(connectButton);
+        actionsPanel.Controls.Add(mediumComboBox);
+        actionsPanel.Controls.Add(baudComboBox);
         actionsPanel.Controls.Add(refreshButton);
         actionsPanel.Controls.Add(createButton);
         actionsPanel.Controls.Add(mkdirButton);
@@ -118,6 +130,26 @@ partial class BrowserForm
         connectButton.Text = "Подключиться";
         connectButton.UseVisualStyleBackColor = true;
         // 
+        // mediumComboBox
+        //
+        mediumComboBox.AccessibleName = "Накопитель на плате";
+        mediumComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+        mediumComboBox.Items.AddRange(new object[] { "SD-карта", "W25Q16" });
+        mediumComboBox.Location = new Point(356, 3);
+        mediumComboBox.Name = "mediumComboBox";
+        mediumComboBox.Size = new Size(140, 28);
+        mediumComboBox.TabIndex = 3;
+        //
+        // baudComboBox
+        //
+        baudComboBox.AccessibleName = "Скорость USART1, бод";
+        baudComboBox.DropDownStyle = ComboBoxStyle.DropDownList;
+        baudComboBox.Items.AddRange(new object[] { 9600, 19200, 38400, 57600, 115200, 230400, 460800 });
+        baudComboBox.Location = new Point(502, 3);
+        baudComboBox.Name = "baudComboBox";
+        baudComboBox.Size = new Size(95, 28);
+        baudComboBox.TabIndex = 4;
+        //
         // refreshButton
         // 
         refreshButton.AutoSize = true;
@@ -185,7 +217,7 @@ partial class BrowserForm
         uploadButton.Name = "uploadButton";
         uploadButton.Size = new Size(160, 30);
         uploadButton.TabIndex = 10;
-        uploadButton.Text = "Загрузить на карту…";
+        uploadButton.Text = "Загрузить…";
         uploadButton.UseVisualStyleBackColor = true;
         // 
         // downloadButton
@@ -266,7 +298,7 @@ partial class BrowserForm
         // 
         // locationBar
         // 
-        locationBar.AccessibleName = "Путь на карте";
+        locationBar.AccessibleName = "Путь на накопителе";
         locationBar.AutoScroll = true;
         locationBar.Dock = DockStyle.Fill;
         locationBar.Location = new Point(3, 37);
@@ -277,7 +309,7 @@ partial class BrowserForm
         // 
         // filesListView
         // 
-        filesListView.AccessibleName = "Файлы SD-карты";
+        filesListView.AccessibleName = "Файлы накопителя";
         filesListView.AllowDrop = true;
         filesListView.Columns.AddRange(new ColumnHeader[] { nameColumn, typeColumn, sizeColumn });
         filesListView.Dock = DockStyle.Fill;
@@ -403,6 +435,23 @@ partial class BrowserForm
         statusLabel.TabIndex = 3;
         statusLabel.Text = "Выберите COM-порт платы.";
         // 
+        // footerPanel
+        //
+        footerPanel.AutoSize = true;
+        footerPanel.ColumnCount = 2;
+        footerPanel.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
+        footerPanel.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+        footerPanel.RowCount = 1;
+        footerPanel.RowStyles.Add(new RowStyle(SizeType.AutoSize));
+        footerPanel.Dock = DockStyle.Fill;
+        footerPanel.Name = "footerPanel";
+        footerPanel.Controls.Add(transferProgress, 0, 0);
+        footerPanel.Controls.Add(freeSpaceLabel, 1, 0);
+        freeSpaceLabel.AutoSize = true;
+        freeSpaceLabel.Anchor = AnchorStyles.Right;
+        freeSpaceLabel.Name = "freeSpaceLabel";
+        freeSpaceLabel.Text = "Свободно —";
+        //
         // transferProgress
         // 
         transferProgress.AccessibleName = "Прогресс передачи";
@@ -418,7 +467,13 @@ partial class BrowserForm
         AutoScaleDimensions = new SizeF(120F, 120F);
         AutoScaleMode = AutoScaleMode.Dpi;
         ClientSize = new Size(1197, 717);
+        fileMenu.DropDownItems.Add(exitMenuItem);
+        mainMenu.Items.AddRange(new ToolStripItem[] { fileMenu, viewMenu, paneMenu, helpMenu });
+        mainMenu.Dock = DockStyle.Top;
+        mainMenu.Name = "mainMenu";
+        MainMenuStrip = mainMenu;
         Controls.Add(layout);
+        Controls.Add(mainMenu);
         MinimumSize = new Size(820, 420);
         Name = "BrowserForm";
         StartPosition = FormStartPosition.CenterScreen;
@@ -442,8 +497,18 @@ partial class BrowserForm
     private TableLayoutPanel layout;
     private Panel actionsPanel;
     private ComboBox portsComboBox;
+    private ComboBox baudComboBox;
+    private MenuStrip mainMenu;
+    private ToolStripMenuItem fileMenu;
+    private ToolStripMenuItem viewMenu;
+    private ToolStripMenuItem paneMenu;
+    private ToolStripMenuItem helpMenu;
+    private ToolStripMenuItem exitMenuItem;
+    private TableLayoutPanel footerPanel;
+    private Label freeSpaceLabel;
     private Button scanButton;
     private Button connectButton;
+    private ComboBox mediumComboBox;
     private Button refreshButton;
     private Button createButton;
     private Button mkdirButton;

@@ -69,6 +69,10 @@
 			"sourceGroupIndex" : 0
 		},
 		{
+			"path" : "drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_mmc.c",
+			"sourceGroupIndex" : 0
+		},
+		{
 			"path" : "drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
 			"sourceGroupIndex" : 0
 		},
@@ -97,11 +101,7 @@
 			"sourceGroupIndex" : 0
 		},
 		{
-			"path" : "drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"path" : "drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_tim_ex.c",
+			"path" : "drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c",
 			"sourceGroupIndex" : 0
 		},
 		{

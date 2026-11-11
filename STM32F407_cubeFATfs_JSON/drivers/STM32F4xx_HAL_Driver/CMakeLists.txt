@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.20)
 
 set(LIB_NAME hal_stm32f4xx)
 
-file(GLOB sources
+file(GLOB sources CONFIGURE_DEPENDS
   ${CMAKE_CURRENT_LIST_DIR}/Src/*.c
   ${CMAKE_CURRENT_LIST_DIR}/Src/*.cpp
 )
