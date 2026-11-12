@@ -43,7 +43,9 @@
 			"paths" : 
 			[
 				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/ili9341.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/lcd_playback_diagnostics.c",
 				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/main.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/rgb565_file.c",
 				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/sd_browser.c",
 				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/slideshow.c",
 				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/stm32f4xx_hal_msp.c",
@@ -53,6 +55,7 @@
 				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/system_stm32f4xx.c",
 				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/uart_settings.c",
 				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/usart_ring.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/video_player.c",
 				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/w25q16.c"
 			],
 			"recurse" : true

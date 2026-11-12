@@ -24,8 +24,12 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ili9341.h"
+#ifdef LCD_PLAYBACK_DIAGNOSTICS
+#include "lcd_playback_diagnostics.h"
+#endif
 #include "sd_browser.h"
 #include "slideshow.h"
+#include "video_player.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -119,7 +123,14 @@ int main(void)
 
     /* USER CODE BEGIN 3 */
     SD_Browser_Poll();
-    Slideshow_Poll();
+#ifdef LCD_PLAYBACK_DIAGNOSTICS
+    LcdPlaybackDiagnostics_Poll();
+#else
+    if (!VideoPlayer_Poll())
+    {
+      Slideshow_Poll();
+    }
+#endif
   }
   /* USER CODE END 3 */
 }
@@ -254,7 +265,7 @@ static void MX_SDIO_SD_Init(void)
   hsd.Init.ClockPowerSave = SDIO_CLOCK_POWER_SAVE_DISABLE;
   hsd.Init.BusWide = SDIO_BUS_WIDE_1B;
   hsd.Init.HardwareFlowControl = SDIO_HARDWARE_FLOW_CONTROL_DISABLE;
-  hsd.Init.ClockDiv = 2;
+  hsd.Init.ClockDiv = 0;
   /* USER CODE BEGIN SDIO_Init 2 */
 
   /* USER CODE END SDIO_Init 2 */

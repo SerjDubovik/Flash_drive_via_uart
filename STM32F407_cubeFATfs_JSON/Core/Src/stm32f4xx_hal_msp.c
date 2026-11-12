@@ -416,7 +416,9 @@ static void HAL_FSMC_MspInit(void){
   HAL_GPIO_Init(GPIOD, &GPIO_InitStruct);
 
   /* USER CODE BEGIN FSMC_MspInit 1 */
-
+  /* PD5 (FSMC_NWE) needs a slower edge for reliable writes on the LCD cable. */
+  MODIFY_REG(GPIOD->OSPEEDR, 3UL << (2U * 5U),
+             GPIO_SPEED_FREQ_MEDIUM << (2U * 5U));
   /* USER CODE END FSMC_MspInit 1 */
 }
 

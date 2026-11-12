@@ -4,6 +4,9 @@
 #include "ili9341.h"
 #include "usbd_cdc_if.h"
 #include "usart_ring.h"
+#ifndef LCD_PLAYBACK_DIAGNOSTICS
+#include "video_player.h"
+#endif
 #include "w25q16.h"
 
 #include <stdbool.h>
@@ -571,19 +574,82 @@ static FRESULT report_free_space(uint32_t id)
 
 static FRESULT execute(Request *req)
 {
+    if (!req->fields && (equal(req->op, u"lcd61") || equal(req->op, u"lcd70"))) {
+        uint32_t refresh_ms = ILI9341_SetRefreshRate(equal(req->op, u"lcd61"));
+        return transmit(snprintf(response, sizeof(response),
+            "{\"id\":%lu,\"refresh_4frames_ms\":%lu}\n",
+            (unsigned long)req->id, (unsigned long)refresh_ms)) ? FR_OK : FR_TIMEOUT;
+    }
+    if (!req->fields && (equal(req->op, u"invfrm") || equal(req->op, u"invline"))) {
+        ILI9341_SetFrameInversion(equal(req->op, u"invfrm"));
+        return FR_OK;
+    }
+#ifndef LCD_PLAYBACK_DIAGNOSTICS
+    if (!req->fields && equal(req->op, u"vidstat")) {
+        VideoPlayer_Stats stats = VideoPlayer_GetStats();
+        return transmit(snprintf(response, sizeof(response),
+            "{\"id\":%lu,\"tick_ms\":%lu,\"frames\":%lu,\"late_frames\":%lu,"
+            "\"frame_ms\":%lu,\"target_fps\":%u}\n",
+            (unsigned long)req->id, (unsigned long)stats.tick_ms,
+            (unsigned long)stats.frames, (unsigned long)stats.late_frames,
+            (unsigned long)stats.frame_ms, stats.target_fps)) ? FR_OK : FR_TIMEOUT;
+    }
+    if (!req->fields && (equal(req->op, u"vid30") || equal(req->op, u"vidauto"))) {
+        VideoPlayer_Force30Fps(equal(req->op, u"vid30"));
+        return FR_OK;
+    }
+    if (!req->fields && equal(req->op, u"lcdpix")) {
+        const uint16_t y = ILI9341_HEIGHT / 2U;
+        uint16_t row[ILI9341_WIDTH] __attribute__((aligned(4)));
+        uint16_t screen[ILI9341_WIDTH];
+        if (!VideoPlayer_ReadStillRow(y, row)) return FR_DISK_ERR;
+        ILI9341_ReadRow(y, screen);
+
+        unsigned matches = 0;
+        unsigned mirrored = 0;
+        for (unsigned x = 0; x < ILI9341_WIDTH; ++x) {
+            matches += row[x] == screen[x];
+            mirrored += row[x] == screen[ILI9341_WIDTH - 1U - x];
+        }
+
+        size_t length = (size_t)snprintf(response, sizeof(response),
+            "{\"id\":%lu,\"row\":%u,\"matches\":%u,\"mirrored\":%u,\"source\":\"",
+            (unsigned long)req->id, (unsigned)y, matches, mirrored);
+        for (unsigned x = 0; x < ILI9341_WIDTH; ++x) {
+            length += (size_t)snprintf(response + length, sizeof(response) - length,
+                "%04X", (unsigned)row[x]);
+        }
+        length += (size_t)snprintf(response + length, sizeof(response) - length, "\",\"screen\":\"");
+        for (unsigned x = 0; x < ILI9341_WIDTH; ++x) {
+            length += (size_t)snprintf(response + length, sizeof(response) - length,
+                "%04X", (unsigned)screen[x]);
+        }
+        return transmit((int)length + snprintf(response + length, sizeof(response) - length,
+            "\"}\n")) ? FR_OK : FR_TIMEOUT;
+    }
+    if (!req->fields && equal(req->op, u"vidshot")) {
+        return VideoPlayer_ShowStill() ? FR_OK : FR_DISK_ERR;
+    }
+    if (!req->fields && (equal(req->op, u"vidhold") || equal(req->op, u"vidplay"))) {
+        VideoPlayer_SetPaused(equal(req->op, u"vidhold"));
+        return FR_OK;
+    }
+#endif
     if (equal(req->op, u"lcdid") && !req->fields) {
         ILI9341_BusProbe probe;
         ILI9341_ProbeBus(&probe);
         return transmit(snprintf(response, sizeof(response),
             "{\"id\":%lu,\"d3\":[\"%04X\",\"%04X\",\"%04X\",\"%04X\"],"
             "\"d3_high\":[\"%04X\",\"%04X\",\"%04X\",\"%04X\"],"
-            "\"reg0\":\"%04X\",\"pull_up\":\"%04X\",\"pull_down\":\"%04X\",\"fill_ms\":%lu}\n",
+            "\"reg0\":\"%04X\",\"pull_up\":\"%04X\",\"pull_down\":\"%04X\",\"fill_ms\":%lu,"
+            "\"scan_synced\":%s,\"sync_wait_ms\":%lu}\n",
             (unsigned long)req->id, (unsigned)probe.d3[0], (unsigned)probe.d3[1],
             (unsigned)probe.d3[2], (unsigned)probe.d3[3],
             (unsigned)probe.d3_high[0], (unsigned)probe.d3_high[1],
             (unsigned)probe.d3_high[2], (unsigned)probe.d3_high[3],
             (unsigned)probe.reg0, (unsigned)probe.pull_up,
-            (unsigned)probe.pull_down, (unsigned long)probe.fill_ms)) ? FR_OK : FR_TIMEOUT;
+            (unsigned)probe.pull_down, (unsigned long)probe.fill_ms,
+            probe.scan_synced ? "true" : "false", (unsigned long)probe.sync_wait_ms)) ? FR_OK : FR_TIMEOUT;
     }
 
     if (transfer.mode != TRANSFER_NONE && transfer.owner != reply_port) return FR_LOCKED;

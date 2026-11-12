@@ -76,11 +76,13 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# sources_SRCS at CMakeLists.txt:37 (file)
+# sources_SRCS at CMakeLists.txt:39 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/*.c")
 set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/ili9341.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/lcd_playback_diagnostics.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/main.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/rgb565_file.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/sd_browser.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/slideshow.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/stm32f4xx_hal_msp.c"
@@ -90,6 +92,7 @@ set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/system_stm32f4xx.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/uart_settings.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/usart_ring.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/video_player.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/w25q16.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -113,7 +116,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# sources_SRCS at CMakeLists.txt:37 (file)
+# sources_SRCS at CMakeLists.txt:39 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/FATFS/App/*.c")
 set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/FATFS/App/fatfs.c"
@@ -139,7 +142,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# sources_SRCS at CMakeLists.txt:37 (file)
+# sources_SRCS at CMakeLists.txt:39 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/FATFS/Target/*.c")
 set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/FATFS/Target/bsp_driver_sd.c"
@@ -167,7 +170,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# sources_SRCS at CMakeLists.txt:37 (file)
+# sources_SRCS at CMakeLists.txt:39 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/*.c")
 set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c"
@@ -193,7 +196,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# sources_SRCS at CMakeLists.txt:37 (file)
+# sources_SRCS at CMakeLists.txt:39 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Core/Src/*.c")
 set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c"
@@ -221,7 +224,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# sources_SRCS at CMakeLists.txt:37 (file)
+# sources_SRCS at CMakeLists.txt:39 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/*.c")
 set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/diskio.c"
@@ -251,7 +254,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# sources_SRCS at CMakeLists.txt:37 (file)
+# sources_SRCS at CMakeLists.txt:39 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/App/*.c")
 set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/App/usb_device.c"
@@ -279,7 +282,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# sources_SRCS at CMakeLists.txt:37 (file)
+# sources_SRCS at CMakeLists.txt:39 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/Target/*.c")
 set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/Target/usbd_conf.c"
@@ -305,7 +308,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# sources_SRCS at CMakeLists.txt:37 (file)
+# sources_SRCS at CMakeLists.txt:39 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/startup/startup_stm32f407zetx.s")
 set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/startup/startup_stm32f407zetx.s"
@@ -331,7 +334,7 @@ if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   file(TOUCH_NOCREATE "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/cmake.verify_globs")
 endif()
 
-# sources_SRCS at CMakeLists.txt:37 (file)
+# sources_SRCS at CMakeLists.txt:39 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/startup/system_stm32f4xx.c")
 set(OLD_GLOB
   )

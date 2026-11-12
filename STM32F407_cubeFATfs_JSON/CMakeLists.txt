@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.22)
 
+option(LCD_PLAYBACK_DIAGNOSTICS "Compare LCD updates from RAM and SD" OFF)
+
 #
 # User is free to modify the file as much as necessary
 #
@@ -121,6 +123,7 @@ target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
 # Add project symbols (macros)
 target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
     ${symbols_SYMB}
+    $<$<BOOL:${LCD_PLAYBACK_DIAGNOSTICS}>:LCD_PLAYBACK_DIAGNOSTICS>
     $<$<COMPILE_LANGUAGE:C>: ${symbols_c_SYMB}>
     $<$<COMPILE_LANGUAGE:CXX>: ${symbols_cxx_SYMB}>
     $<$<COMPILE_LANGUAGE:ASM>: ${symbols_asm_SYMB}>

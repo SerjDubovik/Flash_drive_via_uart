@@ -1254,6 +1254,18 @@
 			"value" : "FALSE"
 		},
 		{
+			"name" : "LCD_PLAYBACK_DIAGNOSTICS",
+			"properties" : 
+			[
+				{
+					"name" : "HELPSTRING",
+					"value" : "Compare LCD updates from RAM and SD"
+				}
+			],
+			"type" : "BOOL",
+			"value" : "OFF"
+		},
+		{
 			"name" : "STM32F407_cubeLed_BINARY_DIR",
 			"properties" : 
 			[
