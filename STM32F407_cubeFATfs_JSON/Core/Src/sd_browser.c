@@ -1,6 +1,7 @@
 #include "sd_browser.h"
 
 #include "fatfs.h"
+#include "ili9341.h"
 #include "usbd_cdc_if.h"
 #include "usart_ring.h"
 #include "w25q16.h"
@@ -570,6 +571,21 @@ static FRESULT report_free_space(uint32_t id)
 
 static FRESULT execute(Request *req)
 {
+    if (equal(req->op, u"lcdid") && !req->fields) {
+        ILI9341_BusProbe probe;
+        ILI9341_ProbeBus(&probe);
+        return transmit(snprintf(response, sizeof(response),
+            "{\"id\":%lu,\"d3\":[\"%04X\",\"%04X\",\"%04X\",\"%04X\"],"
+            "\"d3_high\":[\"%04X\",\"%04X\",\"%04X\",\"%04X\"],"
+            "\"reg0\":\"%04X\",\"pull_up\":\"%04X\",\"pull_down\":\"%04X\",\"fill_ms\":%lu}\n",
+            (unsigned long)req->id, (unsigned)probe.d3[0], (unsigned)probe.d3[1],
+            (unsigned)probe.d3[2], (unsigned)probe.d3[3],
+            (unsigned)probe.d3_high[0], (unsigned)probe.d3_high[1],
+            (unsigned)probe.d3_high[2], (unsigned)probe.d3_high[3],
+            (unsigned)probe.reg0, (unsigned)probe.pull_up,
+            (unsigned)probe.pull_down, (unsigned long)probe.fill_ms)) ? FR_OK : FR_TIMEOUT;
+    }
+
     if (transfer.mode != TRANSFER_NONE && transfer.owner != reply_port) return FR_LOCKED;
 
     const TCHAR *volume = volumes[reply_port];

@@ -24,7 +24,9 @@ set(OLD_GLOB
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c"
   )
@@ -77,8 +79,10 @@ endif()
 # sources_SRCS at CMakeLists.txt:37 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/*.c")
 set(OLD_GLOB
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/ili9341.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/main.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/sd_browser.c"
+  "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/slideshow.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/stm32f4xx_hal_msp.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/stm32f4xx_it.c"
   "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/syscalls.c"
