@@ -24,7 +24,6 @@ static uint16_t dma_pixels;
 static uint32_t scan_wait_ms;
 static bool scan_synced;
 
-#define SCREEN_PIXELS (ILI9341_WIDTH * ILI9341_HEIGHT)
 
 enum
 {
@@ -233,10 +232,15 @@ void ILI9341_Init(void)
 
 void ILI9341_BeginFrame(void)
 {
+  ILI9341_BeginWindow(0, 0, ILI9341_WIDTH, ILI9341_HEIGHT);
+}
+
+void ILI9341_BeginWindow(uint16_t x, uint16_t y, uint16_t width, uint16_t height)
+{
   frame_start = HAL_GetTick();
-  pixels_remaining = SCREEN_PIXELS;
-  SetAddressRange(LCD_COLUMN_ADDRESS, 0, ILI9341_WIDTH - 1U);
-  SetAddressRange(LCD_PAGE_ADDRESS, 0, ILI9341_HEIGHT - 1U);
+  pixels_remaining = (uint32_t)width * height;
+  SetAddressRange(LCD_COLUMN_ADDRESS, x, x + width - 1U);
+  SetAddressRange(LCD_PAGE_ADDRESS, y, y + height - 1U);
   WriteCommand(LCD_MEMORY_WRITE);
 }
 
@@ -279,6 +283,26 @@ void ILI9341_WritePixels(const uint16_t *pixels, uint32_t count)
   }
 
   FinishPixels(count);
+}
+
+void ILI9341_FillRect(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint16_t color)
+{
+  if (width == 0 || height == 0 || x + width > ILI9341_WIDTH || y + height > ILI9341_HEIGHT)
+  {
+    return;
+  }
+
+  uint16_t row[ILI9341_WIDTH];
+  for (uint16_t column = 0; column < width; ++column)
+  {
+    row[column] = color;
+  }
+
+  ILI9341_BeginWindow(x, y, width, height);
+  for (uint16_t line = 0; line < height; ++line)
+  {
+    ILI9341_WritePixels(row, width);
+  }
 }
 
 void ILI9341_StartPixels(const uint16_t *pixels, uint16_t count)

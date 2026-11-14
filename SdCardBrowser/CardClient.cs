@@ -4,6 +4,7 @@ using System.Text.Json;
 namespace SdCardBrowser;
 
 internal sealed record CardEntry(string Name, bool IsDirectory, uint Size);
+internal sealed record TouchSample(bool Pressed, int X, int Y, int RawX, int RawY);
 
 internal sealed class FatFsException(int result) : IOException(Describe(result))
 {
@@ -81,6 +82,17 @@ internal sealed class CardClient : IDisposable
         {
             throw new IOException("Прошивка STM32 не поддерживает том W25Q16. Обновите её и подключитесь снова.", ex);
         }
+    }
+
+    public TouchSample ReadTouch()
+    {
+        TouchSample? sample = null;
+        Exchange("touch", null, null, reply => sample = new TouchSample(
+            reply.GetProperty("pressed").GetBoolean(),
+            reply.GetProperty("x").GetInt32(), reply.GetProperty("y").GetInt32(),
+            reply.GetProperty("rawX").GetInt32(), reply.GetProperty("rawY").GetInt32()),
+            singlePayload: true);
+        return sample!;
     }
 
     public List<CardEntry> List(string path)

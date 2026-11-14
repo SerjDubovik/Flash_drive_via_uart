@@ -38,7 +38,20 @@ internal sealed partial class BrowserForm
             string initial = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             if (!Directory.Exists(initial)) initial = Environment.GetFolderPath(Environment.SpecialFolder.UserProfile);
             if (!Directory.Exists(initial)) initial = Path.GetPathRoot(Environment.SystemDirectory)!;
-            await NavigatePcAsync(initial);
+            string? saved = ExistingLocalFolder(_settings.PcFolder);
+            await RunAsync(async () =>
+            {
+                if (saved is not null)
+                {
+                    try
+                    {
+                        await LoadPcDirectoryAsync(saved);
+                        return;
+                    }
+                    catch (Exception ex) when (ex is IOException or UnauthorizedAccessException) { }
+                }
+                await LoadPcDirectoryAsync(initial);
+            });
         };
         Disposed += (_, _) => Application.RemoveMessageFilter(this);
     }

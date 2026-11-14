@@ -2,9 +2,11 @@
 
 #include "fatfs.h"
 #include "ili9341.h"
+#include "touchscreen.h"
 #include "usbd_cdc_if.h"
 #include "usart_ring.h"
 #ifndef LCD_PLAYBACK_DIAGNOSTICS
+#include "app_lvgl.h"
 #include "video_player.h"
 #endif
 #include "w25q16.h"
@@ -574,6 +576,15 @@ static FRESULT report_free_space(uint32_t id)
 
 static FRESULT execute(Request *req)
 {
+    if (!req->fields && equal(req->op, u"touch")) {
+        TouchscreenSample sample;
+        if (!Touchscreen_Read(&sample)) return FR_DISK_ERR;
+        return transmit(snprintf(response, sizeof(response),
+            "{\"id\":%lu,\"pressed\":%s,\"x\":%u,\"y\":%u,\"rawX\":%u,\"rawY\":%u}\n",
+            (unsigned long)req->id, sample.pressed ? "true" : "false",
+            (unsigned)sample.x, (unsigned)sample.y,
+            (unsigned)sample.raw_x, (unsigned)sample.raw_y)) ? FR_OK : FR_TIMEOUT;
+    }
     if (!req->fields && (equal(req->op, u"lcd61") || equal(req->op, u"lcd70"))) {
         uint32_t refresh_ms = ILI9341_SetRefreshRate(equal(req->op, u"lcd61"));
         return transmit(snprintf(response, sizeof(response),
@@ -628,10 +639,14 @@ static FRESULT execute(Request *req)
             "\"}\n")) ? FR_OK : FR_TIMEOUT;
     }
     if (!req->fields && equal(req->op, u"vidshot")) {
-        return VideoPlayer_ShowStill() ? FR_OK : FR_DISK_ERR;
+        if (!VideoPlayer_ShowStill()) return FR_DISK_ERR;
+        AppLvgl_StartVideo();
+        return FR_OK;
     }
     if (!req->fields && (equal(req->op, u"vidhold") || equal(req->op, u"vidplay"))) {
-        VideoPlayer_SetPaused(equal(req->op, u"vidhold"));
+        bool pause = equal(req->op, u"vidhold");
+        VideoPlayer_SetPaused(pause);
+        if (!pause) AppLvgl_StartVideo();
         return FR_OK;
     }
 #endif

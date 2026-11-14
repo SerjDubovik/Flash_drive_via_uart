@@ -63,6 +63,10 @@ void Error_Handler(void);
 #define UserLED_GPIO_Port GPIOA
 #define W25Q16_CS_Pin GPIO_PIN_15
 #define W25Q16_CS_GPIO_Port GPIOA
+#define T_CS_Pin GPIO_PIN_12
+#define T_CS_GPIO_Port GPIOB
+#define T_IRQ_Pin GPIO_PIN_11
+#define T_IRQ_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 

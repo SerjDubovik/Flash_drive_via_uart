@@ -1,0 +1,128 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "cmsis_stm32f4xx::@74add56496c4d0745176",
+					"jsonFile" : "target-cmsis_stm32f4xx-Debug-c9d0a55b422d8e644fa1.json",
+					"name" : "cmsis_stm32f4xx",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "hal_stm32f4xx::@b8983a0bfb9f6cf9582c",
+					"jsonFile" : "target-hal_stm32f4xx-Debug-dec16381585d68fffcef.json",
+					"name" : "hal_stm32f4xx",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-f040eec181a89de70dbe.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						1
+					],
+					"build" : "drivers/STM32F4xx_HAL_Driver",
+					"jsonFile" : "directory-drivers.STM32F4xx_HAL_Driver-Debug-cc6daa6d3f5f3ae16070.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "drivers/STM32F4xx_HAL_Driver"
+				},
+				{
+					"abstractTargetIndexes" : 
+					[
+						0
+					],
+					"build" : "drivers/CMSIS",
+					"jsonFile" : "directory-drivers.CMSIS-Debug-272508dfb93b6155924d.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "drivers/CMSIS"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "STM32F407_cubeLed",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "STM32F407_cubeLed::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-STM32F407_cubeLed-Debug-256a822d128810f401d5.json",
+					"name" : "STM32F407_cubeLed",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "stm32_lvgl::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-stm32_lvgl-Debug-67ca2ccedacae263e298.json",
+					"name" : "stm32_lvgl",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug",
+		"source" : "C:/II/STM32/STM32F407_cubeFATfs_JSON"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 10
+	}
+}

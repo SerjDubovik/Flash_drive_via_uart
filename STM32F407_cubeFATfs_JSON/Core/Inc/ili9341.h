@@ -9,6 +9,8 @@
 
 void ILI9341_Init(void);
 void ILI9341_BeginFrame(void);
+void ILI9341_BeginWindow(uint16_t x, uint16_t y, uint16_t width, uint16_t height);
+void ILI9341_FillRect(uint16_t x, uint16_t y, uint16_t width, uint16_t height, uint16_t color);
 void ILI9341_WaitForScanStart(void);
 void ILI9341_SetFrameInversion(bool enabled);
 uint32_t ILI9341_SetRefreshRate(bool low_rate);

@@ -41,6 +41,27 @@ rule C_EXECUTABLE_LINKER__STM32F407_cubeLed_Debug
 
 
 #############################################
+# Rule for compiling C files.
+
+rule C_COMPILER__stm32_lvgl_unscanned_Debug
+  depfile = $DEP_FILE
+  deps = gcc
+  command = ${LAUNCHER}${CODE_CHECK}C:\VStools\gnu-tools-for-stm32\tools\bin\arm-none-eabi-gcc.exe $DEFINES $INCLUDES $FLAGS -MD -MT $out -MF $DEP_FILE -o $out -c $in
+  description = Building C object $out
+
+
+#############################################
+# Rule for linking C static library.
+
+rule C_STATIC_LIBRARY_LINKER__stm32_lvgl_Debug
+  command = C:\WINDOWS\system32\cmd.exe /C "$PRE_LINK && C:\VStools\cmake\bin\cmake.exe -E rm -f $TARGET_FILE && C:\VStools\gnu-tools-for-stm32\tools\bin\arm-none-eabi-ar.exe qc $TARGET_FILE $LINK_FLAGS @$RSP_FILE && C:\VStools\gnu-tools-for-stm32\tools\bin\arm-none-eabi-ranlib.exe $TARGET_FILE && $POST_BUILD"
+  description = Linking C static library $TARGET_FILE
+  rspfile = $RSP_FILE
+  rspfile_content = $in $LINK_PATH $LINK_LIBRARIES
+  restat = $RESTAT
+
+
+#############################################
 # Rule for running custom commands.
 
 rule CUSTOM_COMMAND

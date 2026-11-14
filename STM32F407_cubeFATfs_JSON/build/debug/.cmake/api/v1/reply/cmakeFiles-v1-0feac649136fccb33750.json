@@ -1,0 +1,519 @@
+{
+	"globsDependent" : 
+	[
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/*.c",
+			"listDirectories" : true,
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_cortex.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_dma_ex.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_exti.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ex.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_gpio.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_mmc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pcd_ex.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_pwr_ex.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rcc_ex.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_rtc_ex.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sd.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_spi.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_sdmmc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_usb.c"
+			]
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/drivers/STM32F4xx_HAL_Driver/Src/*.cpp",
+			"listDirectories" : true,
+			"paths" : []
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/*.c",
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/app_lvgl.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/ili9341.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/lcd_playback_diagnostics.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/main.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/rgb565_file.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/sd_browser.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/slideshow.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/stm32f4xx_hal_msp.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/stm32f4xx_it.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/syscalls.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/sysmem.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/system_stm32f4xx.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/touchscreen.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/uart_settings.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/usart_ring.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/video_player.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Core/Src/w25q16.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/FATFS/App/*.c",
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/FATFS/App/fatfs.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/FATFS/Target/*.c",
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/FATFS/Target/bsp_driver_sd.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/FATFS/Target/sd_diskio.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/FATFS/Target/w25q16_diskio.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/*.c",
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Src/usbd_cdc.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Core/Src/*.c",
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ctlreq.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/*.c",
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/diskio.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/ff.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/ff_gen_drv.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/option/ccsbcs.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/FatFs/src/option/syscall.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/*.c",
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_disp.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_event.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_group.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_indev.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_indev_scroll.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_obj.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_obj_class.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_obj_draw.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_obj_pos.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_obj_scroll.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_obj_style.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_obj_style_gen.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_obj_tree.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_refr.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/core/lv_theme.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/arm2d/lv_gpu_arm2d.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_draw.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_draw_arc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_draw_img.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_draw_label.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_draw_layer.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_draw_line.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_draw_mask.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_draw_rect.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_draw_transform.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_draw_triangle.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_img_buf.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_img_cache.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/lv_img_decoder.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/pxp/lv_draw_pxp.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/pxp/lv_draw_pxp_blend.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/pxp/lv_gpu_nxp_pxp.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/pxp/lv_gpu_nxp_pxp_osa.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/vglite/lv_draw_vglite.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/vglite/lv_draw_vglite_arc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/vglite/lv_draw_vglite_blend.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/vglite/lv_draw_vglite_line.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/vglite/lv_draw_vglite_rect.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/vglite/lv_vglite_buf.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/nxp/vglite/lv_vglite_utils.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/renesas/lv_gpu_d2_draw_label.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/renesas/lv_gpu_d2_ra6m3.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_arc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_bg.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_composite.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_img.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_label.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_layer.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_line.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_mask.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_polygon.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_rect.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_stack_blur.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_texture_cache.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sdl/lv_draw_sdl_utils.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/stm32_dma2d/lv_gpu_stm32_dma2d.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_arc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_blend.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_dither.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_gradient.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_img.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_layer.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_letter.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_line.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_polygon.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_rect.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/sw/lv_draw_sw_transform.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/draw/swm341_dma2d/lv_gpu_swm341_dma2d.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/layouts/flex/lv_flex.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/layouts/grid/lv_grid.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/bmp/lv_bmp.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/ffmpeg/lv_ffmpeg.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/freetype/lv_freetype.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/fsdrv/lv_fs_fatfs.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/fsdrv/lv_fs_littlefs.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/fsdrv/lv_fs_posix.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/fsdrv/lv_fs_stdio.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/fsdrv/lv_fs_win32.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/gif/gifdec.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/gif/lv_gif.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/png/lodepng.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/png/lv_png.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/qrcode/lv_qrcode.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/qrcode/qrcodegen.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/rlottie/lv_rlottie.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/sjpg/lv_sjpg.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/sjpg/tjpgd.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/libs/tiny_ttf/lv_tiny_ttf.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/lv_extra.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/others/fragment/lv_fragment.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/others/fragment/lv_fragment_manager.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/others/gridnav/lv_gridnav.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/others/ime/lv_ime_pinyin.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/others/imgfont/lv_imgfont.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/others/monkey/lv_monkey.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/others/msg/lv_msg.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/others/snapshot/lv_snapshot.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/themes/basic/lv_theme_basic.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/themes/default/lv_theme_default.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/themes/mono/lv_theme_mono.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/animimg/lv_animimg.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/calendar/lv_calendar.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/calendar/lv_calendar_header_arrow.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/calendar/lv_calendar_header_dropdown.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/chart/lv_chart.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/colorwheel/lv_colorwheel.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/keyboard/lv_keyboard.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/led/lv_led.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/list/lv_list.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/menu/lv_menu.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/meter/lv_meter.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/msgbox/lv_msgbox.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/span/lv_span.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/spinbox/lv_spinbox.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/spinner/lv_spinner.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/tabview/lv_tabview.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/tileview/lv_tileview.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/extra/widgets/win/lv_win.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_dejavu_16_persian_hebrew.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_fmt_txt.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_loader.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_10.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_12.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_12_subpx.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_14.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_16.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_18.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_20.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_22.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_24.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_26.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_28.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_28_compressed.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_30.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_32.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_34.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_36.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_38.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_40.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_42.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_44.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_46.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_48.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_montserrat_8.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_simsun_16_cjk.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_unscii_16.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/font/lv_font_unscii_8.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/hal/lv_hal_disp.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/hal/lv_hal_indev.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/hal/lv_hal_tick.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_anim.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_anim_timeline.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_area.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_async.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_bidi.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_color.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_fs.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_gc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_ll.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_log.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_lru.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_math.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_mem.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_printf.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_style.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_style_gen.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_templ.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_timer.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_tlsf.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_txt.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_txt_ap.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/misc/lv_utils.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_arc.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_bar.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_btn.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_btnmatrix.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_canvas.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_checkbox.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_dropdown.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_img.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_label.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_line.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_objx_templ.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_roller.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_slider.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_switch.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_table.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/Middlewares/Third_Party/lvgl/src/widgets/lv_textarea.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/App/*.c",
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/App/usb_device.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/App/usbd_cdc_if.c",
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/App/usbd_desc.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/Target/*.c",
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/USB_DEVICE/Target/usbd_conf.c"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/startup/startup_stm32f407zetx.s",
+			"paths" : 
+			[
+				"C:/II/STM32/STM32F407_cubeFATfs_JSON/startup/startup_stm32f407zetx.s"
+			],
+			"recurse" : true
+		},
+		{
+			"expression" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/startup/system_stm32f4xx.c",
+			"paths" : [],
+			"recurse" : true
+		}
+	],
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"path" : "cmake/gcc-arm-none-eabi.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/debug/CMakeFiles/4.3.1/CMakeSystem.cmake"
+		},
+		{
+			"path" : "cmake/gcc-arm-none-eabi.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/debug/CMakeFiles/4.3.1/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/debug/CMakeFiles/4.3.1/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Internal/CMakeCLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Platform/Generic.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build/debug/CMakeFiles/4.3.1/CMakeASMCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/CMakeASMInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU-ASM.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "C:/VStools/cmake/share/cmake-4.3/Modules/Internal/CMakeASMLinkerInformation.cmake"
+		},
+		{
+			"path" : "drivers/STM32F4xx_HAL_Driver/CMakeLists.txt"
+		},
+		{
+			"path" : "drivers/CMSIS/CMakeLists.txt"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug",
+		"source" : "C:/II/STM32/STM32F407_cubeFATfs_JSON"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 1
+	}
+}

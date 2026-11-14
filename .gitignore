@@ -1,1 +1,4 @@
 /data/
+/.infones-benchmark/
+/.lvgl-stage/
+/buf/

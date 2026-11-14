@@ -1,4 +1,5 @@
 C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/STM32F407_cubeLed.dir
+C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/stm32_lvgl.dir
 C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/edit_cache.dir
 C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/CMakeFiles/rebuild_cache.dir
 C:/II/STM32/STM32F407_cubeFATfs_JSON/build/debug/drivers/STM32F4xx_HAL_Driver/CMakeFiles/edit_cache.dir

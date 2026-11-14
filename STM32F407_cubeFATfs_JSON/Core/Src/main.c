@@ -24,12 +24,13 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "ili9341.h"
+#include "touchscreen.h"
 #ifdef LCD_PLAYBACK_DIAGNOSTICS
 #include "lcd_playback_diagnostics.h"
+#else
+#include "app_lvgl.h"
 #endif
 #include "sd_browser.h"
-#include "slideshow.h"
-#include "video_player.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -51,6 +52,7 @@ RTC_HandleTypeDef hrtc;
 SD_HandleTypeDef hsd;
 
 SPI_HandleTypeDef hspi1;
+SPI_HandleTypeDef hspi2;
 
 UART_HandleTypeDef huart1;
 
@@ -66,6 +68,7 @@ static void MX_SDIO_SD_Init(void);
 static void MX_USART1_UART_Init(void);
 static void MX_RTC_Init(void);
 static void MX_SPI1_Init(void);
+static void MX_SPI2_Init(void);
 static void MX_FSMC_Init(void);
 /* USER CODE BEGIN PFP */
 /* USER CODE END PFP */
@@ -107,12 +110,16 @@ int main(void)
   MX_FATFS_Init();
   MX_RTC_Init();
   MX_SPI1_Init();
+  MX_SPI2_Init();
   MX_USART1_UART_Init();
   MX_USB_DEVICE_Init();
   MX_FSMC_Init();
   /* USER CODE BEGIN 2 */
   SD_Browser_Init();
   ILI9341_Init();
+#ifndef LCD_PLAYBACK_DIAGNOSTICS
+  AppLvgl_Init();
+#endif
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -124,12 +131,12 @@ int main(void)
     /* USER CODE BEGIN 3 */
     SD_Browser_Poll();
 #ifdef LCD_PLAYBACK_DIAGNOSTICS
-    LcdPlaybackDiagnostics_Poll();
-#else
-    if (!VideoPlayer_Poll())
+    if (!Touchscreen_OwnsDisplay())
     {
-      Slideshow_Poll();
+      LcdPlaybackDiagnostics_Poll();
     }
+#else
+    AppLvgl_Poll(Touchscreen_OwnsDisplay());
 #endif
   }
   /* USER CODE END 3 */
@@ -311,6 +318,44 @@ static void MX_SPI1_Init(void)
 }
 
 /**
+  * @brief SPI2 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_SPI2_Init(void)
+{
+
+  /* USER CODE BEGIN SPI2_Init 0 */
+
+  /* USER CODE END SPI2_Init 0 */
+
+  /* USER CODE BEGIN SPI2_Init 1 */
+
+  /* USER CODE END SPI2_Init 1 */
+  /* SPI2 parameter configuration*/
+  hspi2.Instance = SPI2;
+  hspi2.Init.Mode = SPI_MODE_MASTER;
+  hspi2.Init.Direction = SPI_DIRECTION_2LINES;
+  hspi2.Init.DataSize = SPI_DATASIZE_8BIT;
+  hspi2.Init.CLKPolarity = SPI_POLARITY_LOW;
+  hspi2.Init.CLKPhase = SPI_PHASE_1EDGE;
+  hspi2.Init.NSS = SPI_NSS_SOFT;
+  hspi2.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_32;
+  hspi2.Init.FirstBit = SPI_FIRSTBIT_MSB;
+  hspi2.Init.TIMode = SPI_TIMODE_DISABLE;
+  hspi2.Init.CRCCalculation = SPI_CRCCALCULATION_DISABLE;
+  hspi2.Init.CRCPolynomial = 10;
+  if (HAL_SPI_Init(&hspi2) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN SPI2_Init 2 */
+
+  /* USER CODE END SPI2_Init 2 */
+
+}
+
+/**
   * @brief USART1 Initialization Function
   * @param None
   * @retval None
@@ -367,6 +412,7 @@ static void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(RST_Disp_GPIO_Port, RST_Disp_Pin, GPIO_PIN_SET);
   HAL_GPIO_WritePin(UserLED_GPIO_Port, UserLED_Pin, GPIO_PIN_RESET);
   HAL_GPIO_WritePin(W25Q16_CS_GPIO_Port, W25Q16_CS_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(T_CS_GPIO_Port, T_CS_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin : UserLED_Pin */
   GPIO_InitStruct.Pin = UserLED_Pin;
@@ -384,6 +430,14 @@ static void MX_GPIO_Init(void)
 
   GPIO_InitStruct.Pin = RST_Disp_Pin;
   HAL_GPIO_Init(RST_Disp_GPIO_Port, &GPIO_InitStruct);
+
+  GPIO_InitStruct.Pin = T_CS_Pin;
+  HAL_GPIO_Init(T_CS_GPIO_Port, &GPIO_InitStruct);
+
+  GPIO_InitStruct.Pin = T_IRQ_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(T_IRQ_GPIO_Port, &GPIO_InitStruct);
 
   /* USER CODE BEGIN MX_GPIO_Init_2 */
 

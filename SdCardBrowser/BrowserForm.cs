@@ -14,17 +14,18 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
     public BrowserForm()
     {
         InitializeComponent();
-        baudComboBox.SelectedItem = 115200;
+        baudComboBox.SelectedItem = baudComboBox.Items.Contains(_settings.BaudRate) ? _settings.BaudRate : 115200;
         exitMenuItem.Click += (_, _) => Close();
-        mediumComboBox.SelectedIndex = 0;
         mediumComboBox.SelectedIndexChanged += async (_, _) =>
         {
             cardHeading.Text = mediumComboBox.SelectedIndex == 1 ? "W25Q16 STM32" : "SD-карта STM32";
             if (_client is not null) await RunAsync(MountSelectedAsync);
         };
+        mediumComboBox.SelectedIndex = _settings.UseNor ? 1 : 0;
 
         scanButton.Click += (_, _) => ScanPorts();
         portsComboBox.SelectedIndexChanged += (_, _) => UpdateControls();
+        portsComboBox.SelectionChangeCommitted += (_, _) => _settings.Port = portsComboBox.SelectedItem as string;
         connectButton.Click += async (_, _) => await ToggleConnectionAsync();
         refreshButton.Click += async (_, _) => await NavigateAsync(_path);
         createButton.Click += async (_, _) => await CreateAsync(directory: false);
@@ -39,6 +40,18 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         ConfigureFileDrawing(filesListView);
         InitializePcPane();
         InitializeDragAndDrop();
+        InitializeTouchTab();
+        RestoreWindowSettings();
+        if (_settings.TouchTab) _workspaceTabs.SelectedTab = _touchTab;
+        Shown += (_, _) =>
+        {
+            RestoreSplitter();
+            panes.SplitterMoved += (_, _) =>
+            {
+                int width = panes.ClientSize.Width - panes.SplitterWidth;
+                if (!TouchTabSelected && width > 0) _settings.SplitterRatio = panes.SplitterDistance / (double)width;
+            };
+        };
         filesListView.SelectedIndexChanged += (_, _) => UpdateControls();
         filesListView.MouseClick += async (_, e) =>
         {
@@ -55,6 +68,7 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
                 e.Cancel = true;
                 return;
             }
+            SaveSettings();
             Disconnect();
         };
 
@@ -91,12 +105,12 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
 
     private void ScanPorts()
     {
-        string? previous = portsComboBox.SelectedItem as string;
+        string? previous = _settings.Port ?? portsComboBox.SelectedItem as string;
         string[] names = SerialPort.GetPortNames().Order(StringComparer.OrdinalIgnoreCase).ToArray();
         portsComboBox.Items.Clear();
         portsComboBox.Items.AddRange(names);
         if (previous is not null && portsComboBox.Items.Contains(previous)) portsComboBox.SelectedItem = previous;
-        else if (names.Length > 0) portsComboBox.SelectedIndex = 0;
+        else if (previous is null && names.Length > 0) portsComboBox.SelectedIndex = 0;
         statusLabel.Text = names.Length == 0 ? "COM-порты не найдены." : "Выберите COM-порт платы.";
         UpdateControls();
     }
@@ -106,7 +120,7 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         bool connected = _client is not null;
         bool ready = connected && !_busy;
         baudComboBox.Enabled = portsComboBox.Enabled = scanButton.Enabled = !connected && !_busy;
-        mediumComboBox.Enabled = !_busy;
+        mediumComboBox.Enabled = !_busy && !TouchTabSelected;
         connectButton.Enabled = !_busy && (connected || portsComboBox.SelectedItem is not null);
         connectButton.Text = connected ? "Отключиться" : "Подключиться";
         refreshButton.Enabled = createButton.Enabled = mkdirButton.Enabled = filesListView.Enabled = ready;
@@ -120,12 +134,15 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         UseWaitCursor = _busy && _transfer is null;
     }
 
-    private async Task<bool> RunAsync(Func<Task> action, Form? errorOwner = null)
+    private async Task<bool> RunAsync(Func<Task> action, Form? errorOwner = null, bool quiet = false)
     {
         if (_busy) return false;
         _busy = true;
-        statusLabel.Text = "Выполняется операция…";
-        UpdateControls();
+        if (!quiet)
+        {
+            statusLabel.Text = "Выполняется операция…";
+            UpdateControls();
+        }
         try
         {
             await action();
@@ -180,7 +197,14 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         await RunAsync(async () =>
         {
             _client = await Task.Run(() => CardClient.Open(port, baudRate));
-            await MountSelectedAsync();
+            _settings.Port = port;
+            if (TouchTabSelected)
+            {
+                _mountOnFilesTab = true;
+                statusLabel.Text = $"Подключено к {port}.";
+            }
+            else
+                await MountSelectedAsync();
         });
     }
 
@@ -216,6 +240,16 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
                 await Task.Run(() => client.Mount(true));
             }
 
+            string folder = (nor ? _settings.NorFolder : _settings.SdFolder) ?? "/";
+            if (folder.StartsWith('/') && folder != "/")
+            {
+                try
+                {
+                    await LoadDirectoryAsync(client, folder);
+                    return;
+                }
+                catch (FatFsException ex) when (ex.Result is 4 or 5 or 6 or 19) { }
+            }
             await LoadDirectoryAsync(client, "/");
         }
         catch
@@ -229,6 +263,8 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
     {
         CardClient? client = _client;
         _client = null;
+        _mountOnFilesTab = false;
+        ResetTouchView();
         try
         {
             client?.Dispose();
@@ -308,6 +344,8 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         }
         SetLocation(path);
         _cardHistory.Visit(path, historyStep);
+        if (mediumComboBox.SelectedIndex == 1) _settings.NorFolder = path;
+        else _settings.SdFolder = path;
         statusLabel.Text = $"{portsComboBox.SelectedItem} • Элементов: {entries.Count}";
         ulong? freeBytes = await Task.Run(client.GetFreeBytes);
         freeSpaceLabel.Text = freeBytes is ulong bytes ? $"Свободно {bytes:N0} байт" : "Свободно —";
@@ -394,9 +432,17 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
     private async Task UploadAsync()
     {
         if (_client is null || _busy) return;
-        using var dialog = new OpenFileDialog { Title = "Файлы для записи на накопитель", Multiselect = true };
+        using var dialog = new OpenFileDialog
+        {
+            Title = "Файлы для записи на накопитель",
+            Multiselect = true,
+            InitialDirectory = ExistingLocalFolder(_settings.UploadFolder) ?? _pcHistory.Current ?? ""
+        };
         if (dialog.ShowDialog(this) == DialogResult.OK)
+        {
+            _settings.UploadFolder = Path.GetDirectoryName(dialog.FileName);
             await UploadFilesAsync(dialog.FileNames, _path);
+        }
     }
 
     private async Task DownloadAsync()
@@ -406,10 +452,12 @@ internal sealed partial class BrowserForm : Form, IMessageFilter
         {
             Title = "Сохранить файл на ПК",
             FileName = entry.Name,
+            InitialDirectory = ExistingLocalFolder(_settings.DownloadFolder) ?? _pcHistory.Current ?? "",
             AddExtension = false
         };
         if (dialog.ShowDialog(this) != DialogResult.OK) return;
         string target = dialog.FileName;
+        _settings.DownloadFolder = Path.GetDirectoryName(target);
         bool replace = File.Exists(target);
         string cardPath = Join(_path, entry.Name);
 

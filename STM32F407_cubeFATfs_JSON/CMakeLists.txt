@@ -138,6 +138,14 @@ target_compile_definitions(${CMAKE_PROJECT_NAME} PRIVATE
 # Add linked libraries
 target_link_libraries(${CMAKE_PROJECT_NAME} ${link_LIBS})
 
+set(lvgl_dir "${CMAKE_CURRENT_SOURCE_DIR}/Middlewares/Third_Party/lvgl")
+file(GLOB_RECURSE lvgl_sources CONFIGURE_DEPENDS "${lvgl_dir}/src/*.c")
+add_library(stm32_lvgl STATIC ${lvgl_sources})
+target_include_directories(stm32_lvgl PUBLIC "${lvgl_dir}" "${CMAKE_CURRENT_SOURCE_DIR}/Core/Inc")
+target_compile_definitions(stm32_lvgl PUBLIC LV_CONF_INCLUDE_SIMPLE)
+target_compile_options(stm32_lvgl PRIVATE ${cpu_PARAMS} -Os)
+target_link_libraries(${CMAKE_PROJECT_NAME} stm32_lvgl)
+
 # Compiler options
 target_compile_options(${CMAKE_PROJECT_NAME} PRIVATE
     ${cpu_PARAMS}
